@@ -1,0 +1,10 @@
+#!/usr/bin/env ruby
+require 'optparse'
+require 'powerdns-tools'
+
+raise "Please setup site_base/api_key" unless Powerdns.site_base && Powerdns.api_key
+
+@domain = ARGV.first.chomp
+
+@dns = Powerdns::Domain.query(@domain)
+@dns.destroy

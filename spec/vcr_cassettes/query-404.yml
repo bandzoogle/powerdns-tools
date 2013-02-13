@@ -1,0 +1,47 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://abcdefghijklmnopqrstuvwxyz:@powerdns-server.com/domains.json?api_key=abcdefghijklmnopqrstuvwxyz&name=happyserver404.com
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 404
+      message: ! 'Not Found '
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - 3f40403ddcf76ae3f42fd75ab356531d
+      X-Runtime:
+      - '0.022932'
+      Server:
+      - WEBrick/1.3.1 (Ruby/1.9.3/2012-10-12)
+      Date:
+      - Wed, 13 Feb 2013 01:17:43 GMT
+      Content-Length:
+      - '0'
+      Connection:
+      - Keep-Alive
+      Set-Cookie:
+      - _powerdns_session=BAh7CEkiD3Nlc3Npb25faWQGOgZFRkkiJWQzMTdjZmY4ODc5YzE0ZDkyMWI2NWRiOWRmZWRkNDJmBjsAVEkiFXVzZXJfY3JlZGVudGlhbHMGOwBGSSIlMTI3MWVkNWVmMzA1YWFkYWJjNjA1YjE2MDllMjRjNTIGOwBUSSIYdXNlcl9jcmVkZW50aWFsc19pZAY7AEZpBg%3D%3D--5fd104df8172b859b21b199e1ff6db090fba0541;
+        path=/; HttpOnly
+    body:
+      encoding: US-ASCII
+      string: ''
+    http_version: 
+  recorded_at: Wed, 13 Feb 2013 01:17:43 GMT
+recorded_with: VCR 2.4.0

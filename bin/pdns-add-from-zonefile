@@ -1,0 +1,35 @@
+#!/usr/bin/env ruby
+require 'optparse'
+require 'zonefile'
+
+opts = OptionParser.new
+opts.on('-s', '--server [ARG]')    { |s| ENV["POWERDNS_API_URL"] = s }
+opts.on('-d', '--domain [ARG]')    { |d| @domain = d }
+opts.on('-l', '--ttl [ARG]')    	 { |t| @ttl = t.to_i }
+opts.on('-n', '--name [ARG]')    	 { |t| @name = t }
+opts.parse!(ARGV)
+
+require 'powerdns-tools'
+
+raise "Please setup site_base/api_key" unless Powerdns.site_base && Powerdns.api_key
+raise "Please specify a name" unless @name.present?
+raise "Please specify a ttl" unless @ttl.present?
+
+
+data = ARGF.collect { |line|
+  # filter lines that start with comments
+  line unless line[0,1] == ";"
+}.join("").strip
+
+zf = Zonefile.new(data)
+puts zf.soa.inspect
+
+@zt = Powerdns::ZoneTemplate.create(:name => @name, :ttl => @ttl)
+
+zf.records.each { |type, entries|
+  entries.each { |e|
+    puts "#{type} #{e.inspect}"
+    @zt.add_record(type, e[:name], e[:host], {:ttl => e[:ttl], :prio => e[:pri]})
+  }
+}
+

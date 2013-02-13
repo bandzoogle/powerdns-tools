@@ -1,0 +1,171 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://abcdefghijklmnopqrstuvwxyz:@powerdns-server.com/domains.json?api_key=abcdefghijklmnopqrstuvwxyz&name=deleteme.net
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 222.0
+      message: ! 'OK '
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge
+      Etag:
+      - ! '"01f3da5dee6f90e1d56fe1110e5a150e"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - b484c5990808ae9f4361c4d3c09a426b
+      X-Runtime:
+      - '0.040338'
+      Server:
+      - WEBrick/1.3.1 (Ruby/1.9.3/2012-10-12)
+      Date:
+      - Wed, 13 Feb 2013 14:04:45 GMT
+      Content-Length:
+      - '2478'
+      Connection:
+      - Keep-Alive
+      Set-Cookie:
+      - _session_id=BAh7CEkiD3Nlc3Npb25faWQGOgZFRkkiJWFiMDM0MDRmN2JlNmJjZDM4OTZhN2MyZWM1ODIwYTlhBjsAVEkiFXVzZXJfY3JlZGVudGlhbHMGOwBGSSIlMTI3MWVkNWVmMzA1YWFkYWJjNjA1YjE2MDllMjRjNTIGOwBUSSIYdXNlcl9jcmVkZW50aWFsc19pZAY7AEZpBg%3D%3D--d5ae1dea90ca84ef903bde88ad6298e8ee267dd1;
+        path=/; HttpOnly
+    body:
+      encoding: US-ASCII
+      string: ! '{"id":42373,"name":"deleteme.net","master":null,"last_check":null,"type":"NATIVE","notified_serial":null,"account":null,"ttl":86400,"created_at":"2013-02-13T13:50:13Z","updated_at":"2013-02-13T13:50:13Z","zone_template_id":null,"records":[{"id":491864,"domain_id":42373,"name":"deleteme.net","type":"SOA","content":"dns1.happyserver.com.
+        info.happyserver.com. 201004222.02 3600 600 1209600 3600","ttl":14400,"prio":null,"change_date":1360763413,"created_at":"2013-02-13T13:50:13Z","updated_at":"2013-02-13T13:50:13Z","record_template_id":45},{"id":491865,"domain_id":42373,"name":"www","type":"CNAME","content":"deleteme.net","ttl":14400,"prio":null,"change_date":1360763413,"created_at":"2013-02-13T13:50:13Z","updated_at":"2013-02-13T13:50:13Z","record_template_id":46},{"id":491866,"domain_id":42373,"name":"deleteme.net","type":"A","content":"123.123.217.221","ttl":14400,"prio":null,"change_date":1360763413,"created_at":"2013-02-13T13:50:13Z","updated_at":"2013-02-13T13:50:13Z","record_template_id":47},{"id":491867,"domain_id":42373,"name":"deleteme.net","type":"NS","content":"dns1.happyserver.com.","ttl":14400,"prio":null,"change_date":1360763413,"created_at":"2013-02-13T13:50:13Z","updated_at":"2013-02-13T13:50:13Z","record_template_id":48},{"id":491868,"domain_id":42373,"name":"deleteme.net","type":"NS","content":"dns2.happyserver.com.","ttl":14400,"prio":null,"change_date":1360763413,"created_at":"2013-02-13T13:50:13Z","updated_at":"2013-02-13T13:50:13Z","record_template_id":49},{"id":491869,"domain_id":42373,"name":"deleteme.net","type":"MX","content":"mail2.happyserver.com.","ttl":14400,"prio":30,"change_date":1360763413,"created_at":"2013-02-13T13:50:13Z","updated_at":"2013-02-13T13:50:13Z","record_template_id":50},{"id":491870,"domain_id":42373,"name":"deleteme.net","type":"MX","content":"mail3.happyserver.com.","ttl":14400,"prio":10,"change_date":1360763413,"created_at":"2013-02-13T13:50:13Z","updated_at":"2013-02-13T13:50:13Z","record_template_id":51},{"id":491871,"domain_id":42373,"name":"deleteme.net","type":"SPF","content":"\"v=spf1
+        ip4:123.123.217.0/24 ip4:123.123.219.0/24 mx a:server.happyserver.com a:mail1.happyserver.com
+        a:mail2.happyserver.com a:mail3.happyserver.com\"","ttl":3600,"prio":null,"change_date":1360763413,"created_at":"2013-02-13T13:50:13Z","updated_at":"2013-02-13T13:50:13Z","record_template_id":100}],"zone_templates":[{"id":2,"name":"usersite","ttl":900,"created_at":"2011-01-27T17:50:19Z","updated_at":"2011-01-27T17:50:19Z"}]}'
+    http_version: 
+  recorded_at: Wed, 13 Feb 2013 14:04:45 GMT
+- request:
+    method: delete
+    uri: http://abcdefghijklmnopqrstuvwxyz:@powerdns-server.com/domains/42373.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 204
+      message: ! 'No Content '
+    headers:
+      X-Ua-Compatible:
+      - IE=Edge
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - c3a333df97b44789c99fe93d18e47ac3
+      X-Runtime:
+      - '0.037651'
+      Server:
+      - WEBrick/1.3.1 (Ruby/1.9.3/2012-10-12)
+      Date:
+      - Wed, 13 Feb 2013 14:05:30 GMT
+      Connection:
+      - close
+    body:
+      encoding: US-ASCII
+      string: ''
+    http_version: 
+  recorded_at: Wed, 13 Feb 2013 14:05:30 GMT
+- request:
+    method: get
+    uri: http://1271ed5ef305aadabc605b1609e24c52:@localhost:3000/domains.json?api_key=1271ed5ef305aadabc605b1609e24c52&name=deleteme.net
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 222.0
+      message: ! 'OK '
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge
+      Etag:
+      - ! '"632810883c1afdcb490ff491dea6d6c8"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - d08987df47228682bccb17be1289fbb7
+      X-Runtime:
+      - '0.030565'
+      Server:
+      - WEBrick/1.3.1 (Ruby/1.9.3/2012-10-12)
+      Date:
+      - Wed, 13 Feb 2013 14:54:32 GMT
+      Content-Length:
+      - '2735'
+      Connection:
+      - Keep-Alive
+      Set-Cookie:
+      - _session_id=BAh7CEkiD3Nlc3Npb25faWQGOgZFRkkiJTgwYjJjYzEyNWM2MjQ4YWY4ZGMzMmY1NjM0MWIzMDNhBjsAVEkiFXVzZXJfY3JlZGVudGlhbHMGOwBGSSIlMTI3MWVkNWVmMzA1YWFkYWJjNjA1YjE2MDllMjRjNTIGOwBUSSIYdXNlcl9jcmVkZW50aWFsc19pZAY7AEZpBg%3D%3D--f5bttt72fa413852bbe743ace8f5ba5327939ed5;
+        path=/; HttpOnly
+    body:
+      encoding: US-ASCII
+      string: ! '{"id":42377,"name":"deleteme.net","master":null,"last_check":null,"type":"NATIVE","notified_serial":null,"account":null,"ttl":86400,"created_at":"2013-02-13T14:14:35Z","updated_at":"2013-02-13T14:14:35Z","zone_template_id":null,"records":[{"id":491897,"domain_id":42377,"name":"deleteme.net","type":"SOA","content":"dns1.happyserver.com.
+        info.happyserver.com. 20130222.00 3600 600 1209600 3600","ttl":14400,"prio":null,"change_date":1360764875,"created_at":"2013-02-13T14:14:35Z","updated_at":"2013-02-13T14:14:35Z","record_template_id":45},{"id":491898,"domain_id":42377,"name":"www","type":"CNAME","content":"deleteme.net","ttl":14400,"prio":null,"change_date":1360764875,"created_at":"2013-02-13T14:14:35Z","updated_at":"2013-02-13T14:14:35Z","record_template_id":46},{"id":491899,"domain_id":42377,"name":"deleteme.net","type":"A","content":"123.123.217.221","ttl":14400,"prio":null,"change_date":1360764875,"created_at":"2013-02-13T14:14:35Z","updated_at":"2013-02-13T14:14:35Z","record_template_id":47},{"id":491900,"domain_id":42377,"name":"deleteme.net","type":"NS","content":"dns1.happyserver.com.","ttl":14400,"prio":null,"change_date":1360764875,"created_at":"2013-02-13T14:14:35Z","updated_at":"2013-02-13T14:14:35Z","record_template_id":48},{"id":491901,"domain_id":42377,"name":"deleteme.net","type":"NS","content":"dns2.happyserver.com.","ttl":14400,"prio":null,"change_date":1360764875,"created_at":"2013-02-13T14:14:35Z","updated_at":"2013-02-13T14:14:35Z","record_template_id":49},{"id":491902,"domain_id":42377,"name":"deleteme.net","type":"MX","content":"mail2.happyserver.com.","ttl":14400,"prio":30,"change_date":1360764875,"created_at":"2013-02-13T14:14:35Z","updated_at":"2013-02-13T14:14:35Z","record_template_id":50},{"id":491903,"domain_id":42377,"name":"deleteme.net","type":"MX","content":"mail3.happyserver.com.","ttl":14400,"prio":10,"change_date":1360764875,"created_at":"2013-02-13T14:14:35Z","updated_at":"2013-02-13T14:14:35Z","record_template_id":51},{"id":491904,"domain_id":42377,"name":"deleteme.net","type":"SPF","content":"\"v=spf1
+        ip4:123.123.217.0/24 ip4:123.123.219.0/24 mx a:server.happyserver.com a:mail1.happyserver.com
+        a:mail2.happyserver.com a:mail3.happyserver.com\"","ttl":3600,"prio":null,"change_date":1360764875,"created_at":"2013-02-13T14:14:35Z","updated_at":"2013-02-13T14:14:35Z","record_template_id":100},{"id":491905,"domain_id":42377,"name":"mobile.deleteme.net","type":"CNAME","content":"mobile.somewherelse.com","ttl":300,"prio":null,"change_date":1360764875,"created_at":"2013-02-13T14:14:35Z","updated_at":"2013-02-13T14:14:35Z","record_template_id":null}],"zone_templates":[{"id":2,"name":"usersite","ttl":900,"created_at":"2011-01-27T17:50:19Z","updated_at":"2011-01-27T17:50:19Z"}]}'
+    http_version: 
+  recorded_at: Wed, 13 Feb 2013 14:54:32 GMT
+- request:
+    method: delete
+    uri: http://1271ed5ef305aadabc605b1609e24c52:@localhost:3000/domains/42377.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 204
+      message: ! 'No Content '
+    headers:
+      X-Ua-Compatible:
+      - IE=Edge
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - 6496eb3e6222.0fd183fa784aed491093f
+      X-Runtime:
+      - '0.036693'
+      Server:
+      - WEBrick/1.3.1 (Ruby/1.9.3/2012-10-12)
+      Date:
+      - Wed, 13 Feb 2013 14:54:32 GMT
+      Connection:
+      - close
+    body:
+      encoding: US-ASCII
+      string: ''
+    http_version: 
+  recorded_at: Wed, 13 Feb 2013 14:54:32 GMT
+recorded_with: VCR 2.4.0

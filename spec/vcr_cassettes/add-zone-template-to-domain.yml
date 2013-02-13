@@ -1,0 +1,340 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://abcdefghijklmnopqrstuvwxyz:@powerdns-server.com/domains.json
+    body:
+      encoding: US-ASCII
+      string: ! '{"domain":{"name":"happy-test-25.net","zone_template_name":"happyserver"}}'
+    headers:
+      Content-Type:
+      - application/json
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 201
+      message: ! 'Created '
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge
+      Etag:
+      - ! '"11547c1041c2e7d61d50cc60526e05d6"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 094a754485e0d1cf0fd875119c369868
+      X-Runtime:
+      - '0.655680'
+      Server:
+      - WEBrick/1.3.1 (Ruby/1.9.3/2012-10-12)
+      Date:
+      - Wed, 13 Feb 2013 02:16:29 GMT
+      Content-Length:
+      - '1222.04'
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: US-ASCII
+      string: ! '{"id":42367,"name":"happy-test-25.net","master":null,"last_check":null,"type":"NATIVE","notified_serial":null,"account":null,"ttl":86400,"created_at":"2013-02-13T02:16:29Z","updated_at":"2013-02-13T02:16:29Z","zone_template_id":null,"records":[{"id":491535,"domain_id":42367,"name":"happy-test-25.net","type":"SOA","content":"dns1.happyserver.com
+        info.happyserver.com 2010071301 3600 3600 604800 3600","ttl":14400,"prio":null,"change_date":1360721789,"created_at":"2013-02-13T02:16:29Z","updated_at":"2013-02-13T02:16:29Z","record_template_id":1},{"id":491536,"domain_id":42367,"name":"www","type":"CNAME","content":"happy-test-25.net","ttl":14400,"prio":null,"change_date":1360721789,"created_at":"2013-02-13T02:16:29Z","updated_at":"2013-02-13T02:16:29Z","record_template_id":2},{"id":491537,"domain_id":42367,"name":"content","type":"CNAME","content":"contentville.com.","ttl":14400,"prio":null,"change_date":1360721789,"created_at":"2013-02-13T02:16:29Z","updated_at":"2013-02-13T02:16:29Z","record_template_id":3},{"id":491538,"domain_id":42367,"name":"zimbra","type":"CNAME","content":"mail3.happyserver.com","ttl":14400,"prio":null,"change_date":1360721789,"created_at":"2013-02-13T02:16:29Z","updated_at":"2013-02-13T02:16:29Z","record_template_id":4},{"id":491539,"domain_id":42367,"name":"mail","type":"CNAME","content":"mail3.happyserver.com","ttl":14400,"prio":null,"change_date":1360721789,"created_at":"2013-02-13T02:16:29Z","updated_at":"2013-02-13T02:16:29Z","record_template_id":5},{"id":491540,"domain_id":42367,"name":"wwwmail","type":"CNAME","content":"mail3.happyserver.com","ttl":14400,"prio":null,"change_date":1360721789,"created_at":"2013-02-13T02:16:29Z","updated_at":"2013-02-13T02:16:29Z","record_template_id":6},{"id":491541,"domain_id":42367,"name":"assets","type":"CNAME","content":"contentville.com.","ttl":14400,"prio":null,"change_date":1360721789,"created_at":"2013-02-13T02:16:29Z","updated_at":"2013-02-13T02:16:29Z","record_template_id":7},{"id":491542,"domain_id":42367,"name":"happy-test-25.net","type":"A","content":"123.123.217.221","ttl":14400,"prio":null,"change_date":1360721789,"created_at":"2013-02-13T02:16:29Z","updated_at":"2013-02-13T02:16:29Z","record_template_id":8},{"id":491543,"domain_id":42367,"name":"dns2","type":"A","content":"1.1.1.1","ttl":14400,"prio":null,"change_date":1360721789,"created_at":"2013-02-13T02:16:29Z","updated_at":"2013-02-13T02:16:29Z","record_template_id":9},{"id":491544,"domain_id":42367,"name":"dns1","type":"A","content":"123.123.221.223","ttl":14400,"prio":null,"change_date":1360721789,"created_at":"2013-02-13T02:16:29Z","updated_at":"2013-02-13T02:16:29Z","record_template_id":10},{"id":491545,"domain_id":42367,"name":"users","type":"A","content":"123.123.217.221","ttl":14400,"prio":null,"change_date":1360721789,"created_at":"2013-02-13T02:16:29Z","updated_at":"2013-02-13T02:16:29Z","record_template_id":11},{"id":491546,"domain_id":42367,"name":"www4","type":"A","content":"123.123.218.55","ttl":14400,"prio":null,"change_date":1360721789,"created_at":"2013-02-13T02:16:29Z","updated_at":"2013-02-13T02:16:29Z","record_template_id":12},{"id":491547,"domain_id":42367,"name":"monitoring","type":"A","content":"123.123.218.180","ttl":14400,"prio":null,"change_date":1360721789,"created_at":"2013-02-13T02:16:29Z","updated_at":"2013-02-13T02:16:29Z","record_template_id":13},{"id":491548,"domain_id":42367,"name":"dev","type":"A","content":"123.123.218.55","ttl":14400,"prio":null,"change_date":1360721789,"created_at":"2013-02-13T02:16:29Z","updated_at":"2013-02-13T02:16:29Z","record_template_id":14},{"id":491549,"domain_id":42367,"name":"mail2","type":"A","content":"123.123.218.179","ttl":14400,"prio":null,"change_date":1360721789,"created_at":"2013-02-13T02:16:29Z","updated_at":"2013-02-13T02:16:29Z","record_template_id":15},{"id":491550,"domain_id":42367,"name":"secure","type":"A","content":"123.123.217.221","ttl":14400,"prio":null,"change_date":1360721789,"created_at":"2013-02-13T02:16:29Z","updated_at":"2013-02-13T02:16:29Z","record_template_id":16},{"id":491551,"domain_id":42367,"name":"ttt","type":"A","content":"123.123.217.48","ttl":14400,"prio":null,"change_date":1360721789,"created_at":"2013-02-13T02:16:29Z","updated_at":"2013-02-13T02:16:29Z","record_template_id":17},{"id":491552,"domain_id":42367,"name":"a123","type":"A","content":"123.123.218.55","ttl":14400,"prio":null,"change_date":1360721789,"created_at":"2013-02-13T02:16:29Z","updated_at":"2013-02-13T02:16:29Z","record_template_id":18},{"id":491553,"domain_id":42367,"name":"mail3","type":"A","content":"1.1.1.222.0","ttl":14400,"prio":null,"change_date":1360721789,"created_at":"2013-02-13T02:16:29Z","updated_at":"2013-02-13T02:16:29Z","record_template_id":19},{"id":491554,"domain_id":42367,"name":"rrr","type":"A","content":"123.123.218.55","ttl":14400,"prio":null,"change_date":1360721789,"created_at":"2013-02-13T02:16:29Z","updated_at":"2013-02-13T02:16:29Z","record_template_id":20},{"id":491555,"domain_id":42367,"name":"b123","type":"A","content":"123.123.218.55","ttl":14400,"prio":null,"change_date":1360721789,"created_at":"2013-02-13T02:16:29Z","updated_at":"2013-02-13T02:16:29Z","record_template_id":21},{"id":491556,"domain_id":42367,"name":"c123","type":"A","content":"123.123.218.55","ttl":14400,"prio":null,"change_date":1360721789,"created_at":"2013-02-13T02:16:29Z","updated_at":"2013-02-13T02:16:29Z","record_template_id":22},{"id":491557,"domain_id":42367,"name":"api","type":"A","content":"123.123.218.55","ttl":14400,"prio":null,"change_date":1360721789,"created_at":"2013-02-13T02:16:29Z","updated_at":"2013-02-13T02:16:29Z","record_template_id":23},{"id":491558,"domain_id":42367,"name":"tt","type":"A","content":"123.123.217.154","ttl":14400,"prio":null,"change_date":1360721789,"created_at":"2013-02-13T02:16:29Z","updated_at":"2013-02-13T02:16:29Z","record_template_id":24},{"id":491559,"domain_id":42367,"name":"xyz","type":"A","content":"123.123.218.55","ttl":14400,"prio":null,"change_date":1360721789,"created_at":"2013-02-13T02:16:29Z","updated_at":"2013-02-13T02:16:29Z","record_template_id":25},{"id":491560,"domain_id":42367,"name":"users.xyz","type":"A","content":"123.123.218.55","ttl":14400,"prio":null,"change_date":1360721789,"created_at":"2013-02-13T02:16:29Z","updated_at":"2013-02-13T02:16:29Z","record_template_id":26},{"id":491561,"domain_id":42367,"name":"*","type":"A","content":"123.123.217.221","ttl":14400,"prio":null,"change_date":1360721789,"created_at":"2013-02-13T02:16:29Z","updated_at":"2013-02-13T02:16:29Z","record_template_id":27},{"id":491562,"domain_id":42367,"name":"server","type":"A","content":"123.123.218.179","ttl":14400,"prio":null,"change_date":1360721789,"created_at":"2013-02-13T02:16:29Z","updated_at":"2013-02-13T02:16:29Z","record_template_id":28},{"id":491563,"domain_id":42367,"name":"abc","type":"A","content":"123.123.218.55","ttl":14400,"prio":null,"change_date":1360721789,"created_at":"2013-02-13T02:16:29Z","updated_at":"2013-02-13T02:16:29Z","record_template_id":29},{"id":491564,"domain_id":42367,"name":"www6","type":"A","content":"123.123.217.193","ttl":14400,"prio":null,"change_date":1360721789,"created_at":"2013-02-13T02:16:29Z","updated_at":"2013-02-13T02:16:29Z","record_template_id":30},{"id":491565,"domain_id":42367,"name":"www7","type":"A","content":"123.123.217.197","ttl":14400,"prio":null,"change_date":1360721789,"created_at":"2013-02-13T02:16:29Z","updated_at":"2013-02-13T02:16:29Z","record_template_id":31},{"id":491566,"domain_id":42367,"name":"www8","type":"A","content":"123.123.217.205","ttl":14400,"prio":null,"change_date":1360721789,"created_at":"2013-02-13T02:16:29Z","updated_at":"2013-02-13T02:16:29Z","record_template_id":32},{"id":491567,"domain_id":42367,"name":"www9","type":"A","content":"123.123.217.201","ttl":14400,"prio":null,"change_date":1360721789,"created_at":"2013-02-13T02:16:29Z","updated_at":"2013-02-13T02:16:29Z","record_template_id":33},{"id":491568,"domain_id":42367,"name":"*.www4","type":"A","content":"123.123.218.55","ttl":14400,"prio":null,"change_date":1360721789,"created_at":"2013-02-13T02:16:29Z","updated_at":"2013-02-13T02:16:29Z","record_template_id":34},{"id":491569,"domain_id":42367,"name":"*.c123","type":"A","content":"123.123.218.55","ttl":14400,"prio":null,"change_date":1360721789,"created_at":"2013-02-13T02:16:29Z","updated_at":"2013-02-13T02:16:29Z","record_template_id":35},{"id":491570,"domain_id":42367,"name":"*.b123","type":"A","content":"123.123.218.55","ttl":14400,"prio":null,"change_date":1360721789,"created_at":"2013-02-13T02:16:29Z","updated_at":"2013-02-13T02:16:29Z","record_template_id":36},{"id":491571,"domain_id":42367,"name":"*.a123","type":"A","content":"123.123.218.55","ttl":14400,"prio":null,"change_date":1360721789,"created_at":"2013-02-13T02:16:29Z","updated_at":"2013-02-13T02:16:29Z","record_template_id":37},{"id":491572,"domain_id":42367,"name":"*.xyz","type":"A","content":"123.123.218.55","ttl":14400,"prio":null,"change_date":1360721789,"created_at":"2013-02-13T02:16:29Z","updated_at":"2013-02-13T02:16:29Z","record_template_id":38},{"id":491573,"domain_id":42367,"name":"*.abc","type":"A","content":"123.123.218.55","ttl":14400,"prio":null,"change_date":1360721789,"created_at":"2013-02-13T02:16:29Z","updated_at":"2013-02-13T02:16:29Z","record_template_id":39},{"id":491574,"domain_id":42367,"name":"*.dev","type":"A","content":"123.123.218.55","ttl":14400,"prio":null,"change_date":1360721789,"created_at":"2013-02-13T02:16:29Z","updated_at":"2013-02-13T02:16:29Z","record_template_id":40},{"id":491575,"domain_id":42367,"name":"happy-test-25.net","type":"NS","content":"dns1.happyserver.com","ttl":14400,"prio":null,"change_date":1360721789,"created_at":"2013-02-13T02:16:29Z","updated_at":"2013-02-13T02:16:29Z","record_template_id":41},{"id":491576,"domain_id":42367,"name":"happy-test-25.net","type":"NS","content":"dns2.happyserver.com","ttl":14400,"prio":null,"change_date":1360721789,"created_at":"2013-02-13T02:16:29Z","updated_at":"2013-02-13T02:16:29Z","record_template_id":42},{"id":491577,"domain_id":42367,"name":"happy-test-25.net","type":"MX","content":"mail2.happyserver.com","ttl":14400,"prio":30,"change_date":1360721789,"created_at":"2013-02-13T02:16:29Z","updated_at":"2013-02-13T02:16:29Z","record_template_id":43},{"id":491578,"domain_id":42367,"name":"happy-test-25.net","type":"MX","content":"mail3.happyserver.com","ttl":14400,"prio":10,"change_date":1360721789,"created_at":"2013-02-13T02:16:29Z","updated_at":"2013-02-13T02:16:29Z","record_template_id":44},{"id":491579,"domain_id":42367,"name":"ns1","type":"A","content":"123.123.221.223","ttl":3600,"prio":null,"change_date":1360721789,"created_at":"2013-02-13T02:16:29Z","updated_at":"2013-02-13T02:16:29Z","record_template_id":67},{"id":491580,"domain_id":42367,"name":"ns2","type":"A","content":"1.1.1.1","ttl":3600,"prio":null,"change_date":1360721789,"created_at":"2013-02-13T02:16:29Z","updated_at":"2013-02-13T02:16:29Z","record_template_id":68},{"id":491581,"domain_id":42367,"name":"happy-test-25.net","type":"SPF","content":"\"v=spf1
+        ip4:123.123.217.0/24 ip4:123.123.219.0/24 mx a:server.happyserver.com a:mail1.happyserver.com
+        a:mail2.happyserver.com a:mail3.happyserver.com\"","ttl":14400,"prio":null,"change_date":1360721789,"created_at":"2013-02-13T02:16:29Z","updated_at":"2013-02-13T02:16:29Z","record_template_id":69},{"id":491582,"domain_id":42367,"name":"selector._domainkey.happy-test-25.net","type":"TXT","content":"k=rsa;
+        t=s; p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDFkgrf47v+VxveyGtvW0W4eQgZ6EtQ4qA1JSC4DKeHftcG3hRQ2I19JJCbJGv/kStgZlBaEHbSR/frL/9j4bRNxcdAHC1dnpUu5PsltMrflXRwpFbJYFxf1QFrVC+NLwcozUEkj5a3s6JfeMkBVa1xxDVVFUY2BUIV6ghfWVboHQIDAQAB","ttl":14400,"prio":null,"change_date":1360721789,"created_at":"2013-02-13T02:16:29Z","updated_at":"2013-02-13T02:16:29Z","record_template_id":70},{"id":491583,"domain_id":42367,"name":"uploads","type":"CNAME","content":"contentville.com.","ttl":14400,"prio":null,"change_date":1360721789,"created_at":"2013-02-13T02:16:29Z","updated_at":"2013-02-13T02:16:29Z","record_template_id":71},{"id":491584,"domain_id":42367,"name":"happy-test-25.net","type":"TXT","content":"\"v=spf1
+        ip4:123.123.217.0/24 ip4:123.123.219.0/24 mx a:server.happyserver.com a:mail1.happyserver.com
+        a:mail2.happyserver.com a:mail3.happyserver.com\"","ttl":14400,"prio":null,"change_date":1360721789,"created_at":"2013-02-13T02:16:29Z","updated_at":"2013-02-13T02:16:29Z","record_template_id":85}],"zone_templates":[{"id":1,"name":"happyserver","ttl":900,"created_at":"2011-01-27T16:37:32Z","updated_at":"2011-01-27T16:37:32Z"}]}'
+    http_version: 
+  recorded_at: Wed, 13 Feb 2013 02:16:29 GMT
+- request:
+    method: get
+    uri: http://abcdefghijklmnopqrstuvwxyz:@powerdns-server.com/domains.json?api_key=abcdefghijklmnopqrstuvwxyz&name=happy-test-25.net
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 222.0
+      message: ! 'OK '
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge
+      Etag:
+      - ! '"11547c1041c2e7d61d50cc60526e05d6"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - eeb95b25b296404bd84879e65d6e6cd3
+      X-Runtime:
+      - '0.061882'
+      Server:
+      - WEBrick/1.3.1 (Ruby/1.9.3/2012-10-12)
+      Date:
+      - Wed, 13 Feb 2013 02:16:29 GMT
+      Content-Length:
+      - '1222.04'
+      Connection:
+      - Keep-Alive
+      Set-Cookie:
+      - _powerdns_session=BAh7CEkiD3Nlc3Npb25faWQGOgZFRkkiJTM2MzQzOTdkOGRjZTJmOGVhYWQzOWRkYzg1NzM2Njk5BjsAVEkiFXVzZXJfY3JlZGVudGlhbHMGOwBGSSIlMTI3MWVkNWVmMzA1YWFkYWJjNjA1YjE2MDllMjRjNTIGOwBUSSIYdXNlcl9jcmVkZW50aWFsc19pZAY7AEZpBg%3D%3D--319da919b6e96c64406bc83416b97ff3939adc3a;
+        path=/; HttpOnly
+    body:
+      encoding: US-ASCII
+      string: ! '{"id":42367,"name":"happy-test-25.net","master":null,"last_check":null,"type":"NATIVE","notified_serial":null,"account":null,"ttl":86400,"created_at":"2013-02-13T02:16:29Z","updated_at":"2013-02-13T02:16:29Z","zone_template_id":null,"records":[{"id":491535,"domain_id":42367,"name":"happy-test-25.net","type":"SOA","content":"dns1.happyserver.com
+        info.happyserver.com 2010071301 3600 3600 604800 3600","ttl":14400,"prio":null,"change_date":1360721789,"created_at":"2013-02-13T02:16:29Z","updated_at":"2013-02-13T02:16:29Z","record_template_id":1},{"id":491536,"domain_id":42367,"name":"www","type":"CNAME","content":"happy-test-25.net","ttl":14400,"prio":null,"change_date":1360721789,"created_at":"2013-02-13T02:16:29Z","updated_at":"2013-02-13T02:16:29Z","record_template_id":2},{"id":491537,"domain_id":42367,"name":"content","type":"CNAME","content":"contentville.com.","ttl":14400,"prio":null,"change_date":1360721789,"created_at":"2013-02-13T02:16:29Z","updated_at":"2013-02-13T02:16:29Z","record_template_id":3},{"id":491538,"domain_id":42367,"name":"zimbra","type":"CNAME","content":"mail3.happyserver.com","ttl":14400,"prio":null,"change_date":1360721789,"created_at":"2013-02-13T02:16:29Z","updated_at":"2013-02-13T02:16:29Z","record_template_id":4},{"id":491539,"domain_id":42367,"name":"mail","type":"CNAME","content":"mail3.happyserver.com","ttl":14400,"prio":null,"change_date":1360721789,"created_at":"2013-02-13T02:16:29Z","updated_at":"2013-02-13T02:16:29Z","record_template_id":5},{"id":491540,"domain_id":42367,"name":"wwwmail","type":"CNAME","content":"mail3.happyserver.com","ttl":14400,"prio":null,"change_date":1360721789,"created_at":"2013-02-13T02:16:29Z","updated_at":"2013-02-13T02:16:29Z","record_template_id":6},{"id":491541,"domain_id":42367,"name":"assets","type":"CNAME","content":"contentville.com.","ttl":14400,"prio":null,"change_date":1360721789,"created_at":"2013-02-13T02:16:29Z","updated_at":"2013-02-13T02:16:29Z","record_template_id":7},{"id":491542,"domain_id":42367,"name":"happy-test-25.net","type":"A","content":"123.123.217.221","ttl":14400,"prio":null,"change_date":1360721789,"created_at":"2013-02-13T02:16:29Z","updated_at":"2013-02-13T02:16:29Z","record_template_id":8},{"id":491543,"domain_id":42367,"name":"dns2","type":"A","content":"1.1.1.1","ttl":14400,"prio":null,"change_date":1360721789,"created_at":"2013-02-13T02:16:29Z","updated_at":"2013-02-13T02:16:29Z","record_template_id":9},{"id":491544,"domain_id":42367,"name":"dns1","type":"A","content":"123.123.221.223","ttl":14400,"prio":null,"change_date":1360721789,"created_at":"2013-02-13T02:16:29Z","updated_at":"2013-02-13T02:16:29Z","record_template_id":10},{"id":491545,"domain_id":42367,"name":"users","type":"A","content":"123.123.217.221","ttl":14400,"prio":null,"change_date":1360721789,"created_at":"2013-02-13T02:16:29Z","updated_at":"2013-02-13T02:16:29Z","record_template_id":11},{"id":491546,"domain_id":42367,"name":"www4","type":"A","content":"123.123.218.55","ttl":14400,"prio":null,"change_date":1360721789,"created_at":"2013-02-13T02:16:29Z","updated_at":"2013-02-13T02:16:29Z","record_template_id":12},{"id":491547,"domain_id":42367,"name":"monitoring","type":"A","content":"123.123.218.180","ttl":14400,"prio":null,"change_date":1360721789,"created_at":"2013-02-13T02:16:29Z","updated_at":"2013-02-13T02:16:29Z","record_template_id":13},{"id":491548,"domain_id":42367,"name":"dev","type":"A","content":"123.123.218.55","ttl":14400,"prio":null,"change_date":1360721789,"created_at":"2013-02-13T02:16:29Z","updated_at":"2013-02-13T02:16:29Z","record_template_id":14},{"id":491549,"domain_id":42367,"name":"mail2","type":"A","content":"123.123.218.179","ttl":14400,"prio":null,"change_date":1360721789,"created_at":"2013-02-13T02:16:29Z","updated_at":"2013-02-13T02:16:29Z","record_template_id":15},{"id":491550,"domain_id":42367,"name":"secure","type":"A","content":"123.123.217.221","ttl":14400,"prio":null,"change_date":1360721789,"created_at":"2013-02-13T02:16:29Z","updated_at":"2013-02-13T02:16:29Z","record_template_id":16},{"id":491551,"domain_id":42367,"name":"ttt","type":"A","content":"123.123.217.48","ttl":14400,"prio":null,"change_date":1360721789,"created_at":"2013-02-13T02:16:29Z","updated_at":"2013-02-13T02:16:29Z","record_template_id":17},{"id":491552,"domain_id":42367,"name":"a123","type":"A","content":"123.123.218.55","ttl":14400,"prio":null,"change_date":1360721789,"created_at":"2013-02-13T02:16:29Z","updated_at":"2013-02-13T02:16:29Z","record_template_id":18},{"id":491553,"domain_id":42367,"name":"mail3","type":"A","content":"1.1.1.222.0","ttl":14400,"prio":null,"change_date":1360721789,"created_at":"2013-02-13T02:16:29Z","updated_at":"2013-02-13T02:16:29Z","record_template_id":19},{"id":491554,"domain_id":42367,"name":"rrr","type":"A","content":"123.123.218.55","ttl":14400,"prio":null,"change_date":1360721789,"created_at":"2013-02-13T02:16:29Z","updated_at":"2013-02-13T02:16:29Z","record_template_id":20},{"id":491555,"domain_id":42367,"name":"b123","type":"A","content":"123.123.218.55","ttl":14400,"prio":null,"change_date":1360721789,"created_at":"2013-02-13T02:16:29Z","updated_at":"2013-02-13T02:16:29Z","record_template_id":21},{"id":491556,"domain_id":42367,"name":"c123","type":"A","content":"123.123.218.55","ttl":14400,"prio":null,"change_date":1360721789,"created_at":"2013-02-13T02:16:29Z","updated_at":"2013-02-13T02:16:29Z","record_template_id":22},{"id":491557,"domain_id":42367,"name":"api","type":"A","content":"123.123.218.55","ttl":14400,"prio":null,"change_date":1360721789,"created_at":"2013-02-13T02:16:29Z","updated_at":"2013-02-13T02:16:29Z","record_template_id":23},{"id":491558,"domain_id":42367,"name":"tt","type":"A","content":"123.123.217.154","ttl":14400,"prio":null,"change_date":1360721789,"created_at":"2013-02-13T02:16:29Z","updated_at":"2013-02-13T02:16:29Z","record_template_id":24},{"id":491559,"domain_id":42367,"name":"xyz","type":"A","content":"123.123.218.55","ttl":14400,"prio":null,"change_date":1360721789,"created_at":"2013-02-13T02:16:29Z","updated_at":"2013-02-13T02:16:29Z","record_template_id":25},{"id":491560,"domain_id":42367,"name":"users.xyz","type":"A","content":"123.123.218.55","ttl":14400,"prio":null,"change_date":1360721789,"created_at":"2013-02-13T02:16:29Z","updated_at":"2013-02-13T02:16:29Z","record_template_id":26},{"id":491561,"domain_id":42367,"name":"*","type":"A","content":"123.123.217.221","ttl":14400,"prio":null,"change_date":1360721789,"created_at":"2013-02-13T02:16:29Z","updated_at":"2013-02-13T02:16:29Z","record_template_id":27},{"id":491562,"domain_id":42367,"name":"server","type":"A","content":"123.123.218.179","ttl":14400,"prio":null,"change_date":1360721789,"created_at":"2013-02-13T02:16:29Z","updated_at":"2013-02-13T02:16:29Z","record_template_id":28},{"id":491563,"domain_id":42367,"name":"abc","type":"A","content":"123.123.218.55","ttl":14400,"prio":null,"change_date":1360721789,"created_at":"2013-02-13T02:16:29Z","updated_at":"2013-02-13T02:16:29Z","record_template_id":29},{"id":491564,"domain_id":42367,"name":"www6","type":"A","content":"123.123.217.193","ttl":14400,"prio":null,"change_date":1360721789,"created_at":"2013-02-13T02:16:29Z","updated_at":"2013-02-13T02:16:29Z","record_template_id":30},{"id":491565,"domain_id":42367,"name":"www7","type":"A","content":"123.123.217.197","ttl":14400,"prio":null,"change_date":1360721789,"created_at":"2013-02-13T02:16:29Z","updated_at":"2013-02-13T02:16:29Z","record_template_id":31},{"id":491566,"domain_id":42367,"name":"www8","type":"A","content":"123.123.217.205","ttl":14400,"prio":null,"change_date":1360721789,"created_at":"2013-02-13T02:16:29Z","updated_at":"2013-02-13T02:16:29Z","record_template_id":32},{"id":491567,"domain_id":42367,"name":"www9","type":"A","content":"123.123.217.201","ttl":14400,"prio":null,"change_date":1360721789,"created_at":"2013-02-13T02:16:29Z","updated_at":"2013-02-13T02:16:29Z","record_template_id":33},{"id":491568,"domain_id":42367,"name":"*.www4","type":"A","content":"123.123.218.55","ttl":14400,"prio":null,"change_date":1360721789,"created_at":"2013-02-13T02:16:29Z","updated_at":"2013-02-13T02:16:29Z","record_template_id":34},{"id":491569,"domain_id":42367,"name":"*.c123","type":"A","content":"123.123.218.55","ttl":14400,"prio":null,"change_date":1360721789,"created_at":"2013-02-13T02:16:29Z","updated_at":"2013-02-13T02:16:29Z","record_template_id":35},{"id":491570,"domain_id":42367,"name":"*.b123","type":"A","content":"123.123.218.55","ttl":14400,"prio":null,"change_date":1360721789,"created_at":"2013-02-13T02:16:29Z","updated_at":"2013-02-13T02:16:29Z","record_template_id":36},{"id":491571,"domain_id":42367,"name":"*.a123","type":"A","content":"123.123.218.55","ttl":14400,"prio":null,"change_date":1360721789,"created_at":"2013-02-13T02:16:29Z","updated_at":"2013-02-13T02:16:29Z","record_template_id":37},{"id":491572,"domain_id":42367,"name":"*.xyz","type":"A","content":"123.123.218.55","ttl":14400,"prio":null,"change_date":1360721789,"created_at":"2013-02-13T02:16:29Z","updated_at":"2013-02-13T02:16:29Z","record_template_id":38},{"id":491573,"domain_id":42367,"name":"*.abc","type":"A","content":"123.123.218.55","ttl":14400,"prio":null,"change_date":1360721789,"created_at":"2013-02-13T02:16:29Z","updated_at":"2013-02-13T02:16:29Z","record_template_id":39},{"id":491574,"domain_id":42367,"name":"*.dev","type":"A","content":"123.123.218.55","ttl":14400,"prio":null,"change_date":1360721789,"created_at":"2013-02-13T02:16:29Z","updated_at":"2013-02-13T02:16:29Z","record_template_id":40},{"id":491575,"domain_id":42367,"name":"happy-test-25.net","type":"NS","content":"dns1.happyserver.com","ttl":14400,"prio":null,"change_date":1360721789,"created_at":"2013-02-13T02:16:29Z","updated_at":"2013-02-13T02:16:29Z","record_template_id":41},{"id":491576,"domain_id":42367,"name":"happy-test-25.net","type":"NS","content":"dns2.happyserver.com","ttl":14400,"prio":null,"change_date":1360721789,"created_at":"2013-02-13T02:16:29Z","updated_at":"2013-02-13T02:16:29Z","record_template_id":42},{"id":491577,"domain_id":42367,"name":"happy-test-25.net","type":"MX","content":"mail2.happyserver.com","ttl":14400,"prio":30,"change_date":1360721789,"created_at":"2013-02-13T02:16:29Z","updated_at":"2013-02-13T02:16:29Z","record_template_id":43},{"id":491578,"domain_id":42367,"name":"happy-test-25.net","type":"MX","content":"mail3.happyserver.com","ttl":14400,"prio":10,"change_date":1360721789,"created_at":"2013-02-13T02:16:29Z","updated_at":"2013-02-13T02:16:29Z","record_template_id":44},{"id":491579,"domain_id":42367,"name":"ns1","type":"A","content":"123.123.221.223","ttl":3600,"prio":null,"change_date":1360721789,"created_at":"2013-02-13T02:16:29Z","updated_at":"2013-02-13T02:16:29Z","record_template_id":67},{"id":491580,"domain_id":42367,"name":"ns2","type":"A","content":"1.1.1.1","ttl":3600,"prio":null,"change_date":1360721789,"created_at":"2013-02-13T02:16:29Z","updated_at":"2013-02-13T02:16:29Z","record_template_id":68},{"id":491581,"domain_id":42367,"name":"happy-test-25.net","type":"SPF","content":"\"v=spf1
+        ip4:123.123.217.0/24 ip4:123.123.219.0/24 mx a:server.happyserver.com a:mail1.happyserver.com
+        a:mail2.happyserver.com a:mail3.happyserver.com\"","ttl":14400,"prio":null,"change_date":1360721789,"created_at":"2013-02-13T02:16:29Z","updated_at":"2013-02-13T02:16:29Z","record_template_id":69},{"id":491582,"domain_id":42367,"name":"selector._domainkey.happy-test-25.net","type":"TXT","content":"k=rsa;
+        t=s; p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDFkgrf47v+VxveyGtvW0W4eQgZ6EtQ4qA1JSC4DKeHftcG3hRQ2I19JJCbJGv/kStgZlBaEHbSR/frL/9j4bRNxcdAHC1dnpUu5PsltMrflXRwpFbJYFxf1QFrVC+NLwcozUEkj5a3s6JfeMkBVa1xxDVVFUY2BUIV6ghfWVboHQIDAQAB","ttl":14400,"prio":null,"change_date":1360721789,"created_at":"2013-02-13T02:16:29Z","updated_at":"2013-02-13T02:16:29Z","record_template_id":70},{"id":491583,"domain_id":42367,"name":"uploads","type":"CNAME","content":"contentville.com.","ttl":14400,"prio":null,"change_date":1360721789,"created_at":"2013-02-13T02:16:29Z","updated_at":"2013-02-13T02:16:29Z","record_template_id":71},{"id":491584,"domain_id":42367,"name":"happy-test-25.net","type":"TXT","content":"\"v=spf1
+        ip4:123.123.217.0/24 ip4:123.123.219.0/24 mx a:server.happyserver.com a:mail1.happyserver.com
+        a:mail2.happyserver.com a:mail3.happyserver.com\"","ttl":14400,"prio":null,"change_date":1360721789,"created_at":"2013-02-13T02:16:29Z","updated_at":"2013-02-13T02:16:29Z","record_template_id":85}],"zone_templates":[{"id":1,"name":"happyserver","ttl":900,"created_at":"2011-01-27T16:37:32Z","updated_at":"2011-01-27T16:37:32Z"}]}'
+    http_version: 
+  recorded_at: Wed, 13 Feb 2013 02:16:29 GMT
+- request:
+    method: get
+    uri: http://abcdefghijklmnopqrstuvwxyz:@powerdns-server.com/zone_templates.json?api_key=abcdefghijklmnopqrstuvwxyz&name=usersite
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 222.0
+      message: ! 'OK '
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge
+      Etag:
+      - ! '"1510fc97b464c61bc5d1bf493188ef93"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 5fa4d12c28d92094f3c2f7e3758c0b49
+      X-Runtime:
+      - '0.014181'
+      Server:
+      - WEBrick/1.3.1 (Ruby/1.9.3/2012-10-12)
+      Date:
+      - Wed, 13 Feb 2013 02:16:29 GMT
+      Content-Length:
+      - '110'
+      Connection:
+      - Keep-Alive
+      Set-Cookie:
+      - _powerdns_session=BAh7CEkiD3Nlc3Npb25faWQGOgZFRkkiJTc0MDFhMjkyNTM2YmI1ZmY5ZDZhYjA0MTI1MjRjYjZmBjsAVEkiFXVzZXJfY3JlZGVudGlhbHMGOwBGSSIlMTI3MWVkNWVmMzA1YWFkYWJjNjA1YjE2MDllMjRjNTIGOwBUSSIYdXNlcl9jcmVkZW50aWFsc19pZAY7AEZpBg%3D%3D--4f0ce877acd5a5bb4b85892222.0bfd3a75fb3402;
+        path=/; HttpOnly
+    body:
+      encoding: US-ASCII
+      string: ! '[{"created_at":"2011-01-27T17:50:19Z","id":2,"name":"usersite","ttl":900,"updated_at":"2011-01-27T17:50:19Z"}]'
+    http_version: 
+  recorded_at: Wed, 13 Feb 2013 02:16:29 GMT
+- request:
+    method: post
+    uri: http://abcdefghijklmnopqrstuvwxyz:@powerdns-server.com/domains/42367/domain_templates.json
+    body:
+      encoding: US-ASCII
+      string: ! '{"domain_template":{"zone_template_id":2}}'
+    headers:
+      Content-Type:
+      - application/json
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 222.0
+      message: ! 'OK '
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge
+      Etag:
+      - ! '"6116d1322bb7b0b2c67b672ce089c453"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 57ed2a86b75be30117090ffbb0821f3b
+      X-Runtime:
+      - '1.557227'
+      Server:
+      - WEBrick/1.3.1 (Ruby/1.9.3/2012-10-12)
+      Date:
+      - Wed, 13 Feb 2013 02:16:31 GMT
+      Content-Length:
+      - '233'
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: US-ASCII
+      string: ! '{"id":42367,"name":"happy-test-25.net","master":null,"last_check":null,"type":"NATIVE","notified_serial":null,"account":null,"ttl":86400,"created_at":"2013-02-13T02:16:29Z","updated_at":"2013-02-13T02:16:29Z","zone_template_id":null}'
+    http_version: 
+  recorded_at: Wed, 13 Feb 2013 02:16:31 GMT
+- request:
+    method: get
+    uri: http://abcdefghijklmnopqrstuvwxyz:@powerdns-server.com/domains.json?api_key=abcdefghijklmnopqrstuvwxyz&name=happy-test-25.net
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 222.0
+      message: ! 'OK '
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge
+      Etag:
+      - ! '"10106cad759e396e7e137d9d759cd222.0"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 2ab9e88a4a1897e6d9b13b73de348a99
+      X-Runtime:
+      - '0.048828'
+      Server:
+      - WEBrick/1.3.1 (Ruby/1.9.3/2012-10-12)
+      Date:
+      - Wed, 13 Feb 2013 02:16:31 GMT
+      Content-Length:
+      - '15014'
+      Connection:
+      - Keep-Alive
+      Set-Cookie:
+      - _powerdns_session=BAh7CEkiD3Nlc3Npb25faWQGOgZFRkkiJTUyZmZhNDg0M2QyMmRiNDkzODY0N2FhNGI2ZGQwMjFiBjsAVEkiFXVzZXJfY3JlZGVudGlhbHMGOwBGSSIlMTI3MWVkNWVmMzA1YWFkYWJjNjA1YjE2MDllMjRjNTIGOwBUSSIYdXNlcl9jcmVkZW50aWFsc19pZAY7AEZpBg%3D%3D--6c9656bcf65de1bf786da18ec40727d44cfe3ddb;
+        path=/; HttpOnly
+    body:
+      encoding: US-ASCII
+      string: ! '{"id":42367,"name":"happy-test-25.net","master":null,"last_check":null,"type":"NATIVE","notified_serial":null,"account":null,"ttl":86400,"created_at":"2013-02-13T02:16:29Z","updated_at":"2013-02-13T02:16:29Z","zone_template_id":null,"records":[{"id":491642,"domain_id":42367,"name":"www.happy-test-25.net","type":"CNAME","content":"happy-test-25.net","ttl":14400,"prio":null,"change_date":1360721790,"created_at":"2013-02-13T02:16:30Z","updated_at":"2013-02-13T02:16:30Z","record_template_id":2},{"id":491643,"domain_id":42367,"name":"content.happy-test-25.net","type":"CNAME","content":"contentville.com.","ttl":14400,"prio":null,"change_date":1360721790,"created_at":"2013-02-13T02:16:30Z","updated_at":"2013-02-13T02:16:30Z","record_template_id":3},{"id":491644,"domain_id":42367,"name":"zimbra.happy-test-25.net","type":"CNAME","content":"mail3.happyserver.com","ttl":14400,"prio":null,"change_date":1360721790,"created_at":"2013-02-13T02:16:30Z","updated_at":"2013-02-13T02:16:30Z","record_template_id":4},{"id":491645,"domain_id":42367,"name":"mail.happy-test-25.net","type":"CNAME","content":"mail3.happyserver.com","ttl":14400,"prio":null,"change_date":1360721790,"created_at":"2013-02-13T02:16:30Z","updated_at":"2013-02-13T02:16:30Z","record_template_id":5},{"id":491646,"domain_id":42367,"name":"wwwmail.happy-test-25.net","type":"CNAME","content":"mail3.happyserver.com","ttl":14400,"prio":null,"change_date":1360721790,"created_at":"2013-02-13T02:16:30Z","updated_at":"2013-02-13T02:16:30Z","record_template_id":6},{"id":491647,"domain_id":42367,"name":"assets.happy-test-25.net","type":"CNAME","content":"contentville.com.","ttl":14400,"prio":null,"change_date":1360721790,"created_at":"2013-02-13T02:16:30Z","updated_at":"2013-02-13T02:16:30Z","record_template_id":7},{"id":491648,"domain_id":42367,"name":"happy-test-25.net","type":"A","content":"123.123.217.221","ttl":14400,"prio":null,"change_date":1360721790,"created_at":"2013-02-13T02:16:30Z","updated_at":"2013-02-13T02:16:30Z","record_template_id":8},{"id":491649,"domain_id":42367,"name":"dns2.happy-test-25.net","type":"A","content":"1.1.1.1","ttl":14400,"prio":null,"change_date":1360721790,"created_at":"2013-02-13T02:16:30Z","updated_at":"2013-02-13T02:16:30Z","record_template_id":9},{"id":491650,"domain_id":42367,"name":"dns1.happy-test-25.net","type":"A","content":"123.123.221.223","ttl":14400,"prio":null,"change_date":1360721791,"created_at":"2013-02-13T02:16:31Z","updated_at":"2013-02-13T02:16:31Z","record_template_id":10},{"id":491651,"domain_id":42367,"name":"users.happy-test-25.net","type":"A","content":"123.123.217.221","ttl":14400,"prio":null,"change_date":1360721791,"created_at":"2013-02-13T02:16:31Z","updated_at":"2013-02-13T02:16:31Z","record_template_id":11},{"id":491652,"domain_id":42367,"name":"www4.happy-test-25.net","type":"A","content":"123.123.218.55","ttl":14400,"prio":null,"change_date":1360721791,"created_at":"2013-02-13T02:16:31Z","updated_at":"2013-02-13T02:16:31Z","record_template_id":12},{"id":491653,"domain_id":42367,"name":"monitoring.happy-test-25.net","type":"A","content":"123.123.218.180","ttl":14400,"prio":null,"change_date":1360721791,"created_at":"2013-02-13T02:16:31Z","updated_at":"2013-02-13T02:16:31Z","record_template_id":13},{"id":491654,"domain_id":42367,"name":"dev.happy-test-25.net","type":"A","content":"123.123.218.55","ttl":14400,"prio":null,"change_date":1360721791,"created_at":"2013-02-13T02:16:31Z","updated_at":"2013-02-13T02:16:31Z","record_template_id":14},{"id":491655,"domain_id":42367,"name":"mail2.happy-test-25.net","type":"A","content":"123.123.218.179","ttl":14400,"prio":null,"change_date":1360721791,"created_at":"2013-02-13T02:16:31Z","updated_at":"2013-02-13T02:16:31Z","record_template_id":15},{"id":491656,"domain_id":42367,"name":"secure.happy-test-25.net","type":"A","content":"123.123.217.221","ttl":14400,"prio":null,"change_date":1360721791,"created_at":"2013-02-13T02:16:31Z","updated_at":"2013-02-13T02:16:31Z","record_template_id":16},{"id":491657,"domain_id":42367,"name":"ttt.happy-test-25.net","type":"A","content":"123.123.217.48","ttl":14400,"prio":null,"change_date":1360721791,"created_at":"2013-02-13T02:16:31Z","updated_at":"2013-02-13T02:16:31Z","record_template_id":17},{"id":491658,"domain_id":42367,"name":"a123.happy-test-25.net","type":"A","content":"123.123.218.55","ttl":14400,"prio":null,"change_date":1360721791,"created_at":"2013-02-13T02:16:31Z","updated_at":"2013-02-13T02:16:31Z","record_template_id":18},{"id":491659,"domain_id":42367,"name":"mail3.happy-test-25.net","type":"A","content":"1.1.1.222.0","ttl":14400,"prio":null,"change_date":1360721791,"created_at":"2013-02-13T02:16:31Z","updated_at":"2013-02-13T02:16:31Z","record_template_id":19},{"id":491660,"domain_id":42367,"name":"rrr.happy-test-25.net","type":"A","content":"123.123.218.55","ttl":14400,"prio":null,"change_date":1360721791,"created_at":"2013-02-13T02:16:31Z","updated_at":"2013-02-13T02:16:31Z","record_template_id":20},{"id":491661,"domain_id":42367,"name":"b123.happy-test-25.net","type":"A","content":"123.123.218.55","ttl":14400,"prio":null,"change_date":1360721791,"created_at":"2013-02-13T02:16:31Z","updated_at":"2013-02-13T02:16:31Z","record_template_id":21},{"id":491662,"domain_id":42367,"name":"c123.happy-test-25.net","type":"A","content":"123.123.218.55","ttl":14400,"prio":null,"change_date":1360721791,"created_at":"2013-02-13T02:16:31Z","updated_at":"2013-02-13T02:16:31Z","record_template_id":22},{"id":491663,"domain_id":42367,"name":"api.happy-test-25.net","type":"A","content":"123.123.218.55","ttl":14400,"prio":null,"change_date":1360721791,"created_at":"2013-02-13T02:16:31Z","updated_at":"2013-02-13T02:16:31Z","record_template_id":23},{"id":491664,"domain_id":42367,"name":"tt.happy-test-25.net","type":"A","content":"123.123.217.154","ttl":14400,"prio":null,"change_date":1360721791,"created_at":"2013-02-13T02:16:31Z","updated_at":"2013-02-13T02:16:31Z","record_template_id":24},{"id":491665,"domain_id":42367,"name":"xyz.happy-test-25.net","type":"A","content":"123.123.218.55","ttl":14400,"prio":null,"change_date":1360721791,"created_at":"2013-02-13T02:16:31Z","updated_at":"2013-02-13T02:16:31Z","record_template_id":25},{"id":491666,"domain_id":42367,"name":"users.xyz.happy-test-25.net","type":"A","content":"123.123.218.55","ttl":14400,"prio":null,"change_date":1360721791,"created_at":"2013-02-13T02:16:31Z","updated_at":"2013-02-13T02:16:31Z","record_template_id":26},{"id":491667,"domain_id":42367,"name":"*.happy-test-25.net","type":"A","content":"123.123.217.221","ttl":14400,"prio":null,"change_date":1360721791,"created_at":"2013-02-13T02:16:31Z","updated_at":"2013-02-13T02:16:31Z","record_template_id":27},{"id":491668,"domain_id":42367,"name":"server.happy-test-25.net","type":"A","content":"123.123.218.179","ttl":14400,"prio":null,"change_date":1360721791,"created_at":"2013-02-13T02:16:31Z","updated_at":"2013-02-13T02:16:31Z","record_template_id":28},{"id":491669,"domain_id":42367,"name":"abc.happy-test-25.net","type":"A","content":"123.123.218.55","ttl":14400,"prio":null,"change_date":1360721791,"created_at":"2013-02-13T02:16:31Z","updated_at":"2013-02-13T02:16:31Z","record_template_id":29},{"id":491670,"domain_id":42367,"name":"www6.happy-test-25.net","type":"A","content":"123.123.217.193","ttl":14400,"prio":null,"change_date":1360721791,"created_at":"2013-02-13T02:16:31Z","updated_at":"2013-02-13T02:16:31Z","record_template_id":30},{"id":491671,"domain_id":42367,"name":"www7.happy-test-25.net","type":"A","content":"123.123.217.197","ttl":14400,"prio":null,"change_date":1360721791,"created_at":"2013-02-13T02:16:31Z","updated_at":"2013-02-13T02:16:31Z","record_template_id":31},{"id":491672,"domain_id":42367,"name":"www8.happy-test-25.net","type":"A","content":"123.123.217.205","ttl":14400,"prio":null,"change_date":1360721791,"created_at":"2013-02-13T02:16:31Z","updated_at":"2013-02-13T02:16:31Z","record_template_id":32},{"id":491673,"domain_id":42367,"name":"www9.happy-test-25.net","type":"A","content":"123.123.217.201","ttl":14400,"prio":null,"change_date":1360721791,"created_at":"2013-02-13T02:16:31Z","updated_at":"2013-02-13T02:16:31Z","record_template_id":33},{"id":491674,"domain_id":42367,"name":"*.www4.happy-test-25.net","type":"A","content":"123.123.218.55","ttl":14400,"prio":null,"change_date":1360721791,"created_at":"2013-02-13T02:16:31Z","updated_at":"2013-02-13T02:16:31Z","record_template_id":34},{"id":491675,"domain_id":42367,"name":"*.c123.happy-test-25.net","type":"A","content":"123.123.218.55","ttl":14400,"prio":null,"change_date":1360721791,"created_at":"2013-02-13T02:16:31Z","updated_at":"2013-02-13T02:16:31Z","record_template_id":35},{"id":491676,"domain_id":42367,"name":"*.b123.happy-test-25.net","type":"A","content":"123.123.218.55","ttl":14400,"prio":null,"change_date":1360721791,"created_at":"2013-02-13T02:16:31Z","updated_at":"2013-02-13T02:16:31Z","record_template_id":36},{"id":491677,"domain_id":42367,"name":"*.a123.happy-test-25.net","type":"A","content":"123.123.218.55","ttl":14400,"prio":null,"change_date":1360721791,"created_at":"2013-02-13T02:16:31Z","updated_at":"2013-02-13T02:16:31Z","record_template_id":37},{"id":491678,"domain_id":42367,"name":"*.xyz.happy-test-25.net","type":"A","content":"123.123.218.55","ttl":14400,"prio":null,"change_date":1360721791,"created_at":"2013-02-13T02:16:31Z","updated_at":"2013-02-13T02:16:31Z","record_template_id":38},{"id":491679,"domain_id":42367,"name":"*.abc.happy-test-25.net","type":"A","content":"123.123.218.55","ttl":14400,"prio":null,"change_date":1360721791,"created_at":"2013-02-13T02:16:31Z","updated_at":"2013-02-13T02:16:31Z","record_template_id":39},{"id":491680,"domain_id":42367,"name":"*.dev.happy-test-25.net","type":"A","content":"123.123.218.55","ttl":14400,"prio":null,"change_date":1360721791,"created_at":"2013-02-13T02:16:31Z","updated_at":"2013-02-13T02:16:31Z","record_template_id":40},{"id":491681,"domain_id":42367,"name":"happy-test-25.net","type":"NS","content":"dns1.happyserver.com","ttl":14400,"prio":null,"change_date":1360721791,"created_at":"2013-02-13T02:16:31Z","updated_at":"2013-02-13T02:16:31Z","record_template_id":41},{"id":491682,"domain_id":42367,"name":"happy-test-25.net","type":"NS","content":"dns2.happyserver.com","ttl":14400,"prio":null,"change_date":1360721791,"created_at":"2013-02-13T02:16:31Z","updated_at":"2013-02-13T02:16:31Z","record_template_id":42},{"id":491683,"domain_id":42367,"name":"happy-test-25.net","type":"MX","content":"mail2.happyserver.com","ttl":14400,"prio":30,"change_date":1360721791,"created_at":"2013-02-13T02:16:31Z","updated_at":"2013-02-13T02:16:31Z","record_template_id":43},{"id":491684,"domain_id":42367,"name":"happy-test-25.net","type":"MX","content":"mail3.happyserver.com","ttl":14400,"prio":10,"change_date":1360721791,"created_at":"2013-02-13T02:16:31Z","updated_at":"2013-02-13T02:16:31Z","record_template_id":44},{"id":491685,"domain_id":42367,"name":"ns1.happy-test-25.net","type":"A","content":"123.123.221.223","ttl":3600,"prio":null,"change_date":1360721791,"created_at":"2013-02-13T02:16:31Z","updated_at":"2013-02-13T02:16:31Z","record_template_id":67},{"id":491686,"domain_id":42367,"name":"ns2.happy-test-25.net","type":"A","content":"1.1.1.1","ttl":3600,"prio":null,"change_date":1360721791,"created_at":"2013-02-13T02:16:31Z","updated_at":"2013-02-13T02:16:31Z","record_template_id":68},{"id":491687,"domain_id":42367,"name":"happy-test-25.net","type":"SPF","content":"\"v=spf1
+        ip4:123.123.217.0/24 ip4:123.123.219.0/24 mx a:server.happyserver.com a:mail1.happyserver.com
+        a:mail2.happyserver.com a:mail3.happyserver.com\"","ttl":14400,"prio":null,"change_date":1360721791,"created_at":"2013-02-13T02:16:31Z","updated_at":"2013-02-13T02:16:31Z","record_template_id":69},{"id":491688,"domain_id":42367,"name":"selector._domainkey.happy-test-25.net","type":"TXT","content":"k=rsa;
+        t=s; p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDFkgrf47v+VxveyGtvW0W4eQgZ6EtQ4qA1JSC4DKeHftcG3hRQ2I19JJCbJGv/kStgZlBaEHbSR/frL/9j4bRNxcdAHC1dnpUu5PsltMrflXRwpFbJYFxf1QFrVC+NLwcozUEkj5a3s6JfeMkBVa1xxDVVFUY2BUIV6ghfWVboHQIDAQAB","ttl":14400,"prio":null,"change_date":1360721791,"created_at":"2013-02-13T02:16:31Z","updated_at":"2013-02-13T02:16:31Z","record_template_id":70},{"id":491689,"domain_id":42367,"name":"uploads.happy-test-25.net","type":"CNAME","content":"contentville.com.","ttl":14400,"prio":null,"change_date":1360721791,"created_at":"2013-02-13T02:16:31Z","updated_at":"2013-02-13T02:16:31Z","record_template_id":71},{"id":491690,"domain_id":42367,"name":"happy-test-25.net","type":"TXT","content":"\"v=spf1
+        ip4:123.123.217.0/24 ip4:123.123.219.0/24 mx a:server.happyserver.com a:mail1.happyserver.com
+        a:mail2.happyserver.com a:mail3.happyserver.com\"","ttl":14400,"prio":null,"change_date":1360721791,"created_at":"2013-02-13T02:16:31Z","updated_at":"2013-02-13T02:16:31Z","record_template_id":85},{"id":491691,"domain_id":42367,"name":"www.happy-test-25.net","type":"CNAME","content":"happy-test-25.net","ttl":14400,"prio":null,"change_date":1360721791,"created_at":"2013-02-13T02:16:31Z","updated_at":"2013-02-13T02:16:31Z","record_template_id":46},{"id":491692,"domain_id":42367,"name":"happy-test-25.net","type":"A","content":"123.123.217.221","ttl":14400,"prio":null,"change_date":1360721791,"created_at":"2013-02-13T02:16:31Z","updated_at":"2013-02-13T02:16:31Z","record_template_id":47},{"id":491693,"domain_id":42367,"name":"happy-test-25.net","type":"NS","content":"dns1.happyserver.com.","ttl":14400,"prio":null,"change_date":1360721791,"created_at":"2013-02-13T02:16:31Z","updated_at":"2013-02-13T02:16:31Z","record_template_id":48},{"id":491694,"domain_id":42367,"name":"happy-test-25.net","type":"NS","content":"dns2.happyserver.com.","ttl":14400,"prio":null,"change_date":1360721791,"created_at":"2013-02-13T02:16:31Z","updated_at":"2013-02-13T02:16:31Z","record_template_id":49},{"id":491695,"domain_id":42367,"name":"happy-test-25.net","type":"MX","content":"mail2.happyserver.com.","ttl":14400,"prio":30,"change_date":1360721791,"created_at":"2013-02-13T02:16:31Z","updated_at":"2013-02-13T02:16:31Z","record_template_id":50},{"id":491696,"domain_id":42367,"name":"happy-test-25.net","type":"MX","content":"mail3.happyserver.com.","ttl":14400,"prio":10,"change_date":1360721791,"created_at":"2013-02-13T02:16:31Z","updated_at":"2013-02-13T02:16:31Z","record_template_id":51},{"id":491697,"domain_id":42367,"name":"happy-test-25.net","type":"SPF","content":"\"v=spf1
+        ip4:123.123.217.0/24 ip4:123.123.219.0/24 mx a:server.happyserver.com a:mail1.happyserver.com
+        a:mail2.happyserver.com a:mail3.happyserver.com\"","ttl":3600,"prio":null,"change_date":1360721791,"created_at":"2013-02-13T02:16:31Z","updated_at":"2013-02-13T02:16:31Z","record_template_id":100}],"zone_templates":[{"id":1,"name":"happyserver","ttl":900,"created_at":"2011-01-27T16:37:32Z","updated_at":"2011-01-27T16:37:32Z"},{"id":2,"name":"usersite","ttl":900,"created_at":"2011-01-27T17:50:19Z","updated_at":"2011-01-27T17:50:19Z"}]}'
+    http_version: 
+  recorded_at: Wed, 13 Feb 2013 02:16:31 GMT
+- request:
+    method: post
+    uri: http://1271ed5ef305aadabc605b1609e24c52:@localhost:3000/domains.json
+    body:
+      encoding: US-ASCII
+      string: ! '{"domain":{"name":"happy-test-25.net","zone_template_name":"happyserver"}}'
+    headers:
+      Content-Type:
+      - application/json
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 422
+      message: ''
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - 122edb88ba31256222.0a5859df72a8d3d
+      X-Runtime:
+      - '0.082066'
+      Server:
+      - WEBrick/1.3.1 (Ruby/1.9.3/2012-10-12)
+      Date:
+      - Wed, 13 Feb 2013 14:54:33 GMT
+      Content-Length:
+      - '46'
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: US-ASCII
+      string: ! 'Validation failed: Name has already been taken'
+    http_version: 
+  recorded_at: Wed, 13 Feb 2013 14:54:33 GMT
+- request:
+    method: get
+    uri: http://1271ed5ef305aadabc605b1609e24c52:@localhost:3000/domains.json?api_key=1271ed5ef305aadabc605b1609e24c52&name=happy-test-25.net
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 222.0
+      message: ! 'OK '
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge
+      Etag:
+      - ! '"10106cad759e396e7e137d9d759cd222.0"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 1352f55c950702e10d7b8355ce2d2142
+      X-Runtime:
+      - '0.037721'
+      Server:
+      - WEBrick/1.3.1 (Ruby/1.9.3/2012-10-12)
+      Date:
+      - Wed, 13 Feb 2013 14:54:33 GMT
+      Content-Length:
+      - '15014'
+      Connection:
+      - Keep-Alive
+      Set-Cookie:
+      - _session_id=BAh7CEkiD3Nlc3Npb25faWQGOgZFRkkiJTFmZDA5YWRkZjM0YjAyNzkyODdmODM0YmZlMmRmYzMwBjsAVEkiFXVzZXJfY3JlZGVudGlhbHMGOwBGSSIlMTI3MWVkNWVmMzA1YWFkYWJjNjA1YjE2MDllMjRjNTIGOwBUSSIYdXNlcl9jcmVkZW50aWFsc19pZAY7AEZpBg%3D%3D--819adbe2657a24fe38f822d2c7796c13cd5cfeba;
+        path=/; HttpOnly
+    body:
+      encoding: US-ASCII
+      string: ! '{"id":42367,"name":"happy-test-25.net","master":null,"last_check":null,"type":"NATIVE","notified_serial":null,"account":null,"ttl":86400,"created_at":"2013-02-13T02:16:29Z","updated_at":"2013-02-13T02:16:29Z","zone_template_id":null,"records":[{"id":491642,"domain_id":42367,"name":"www.happy-test-25.net","type":"CNAME","content":"happy-test-25.net","ttl":14400,"prio":null,"change_date":1360721790,"created_at":"2013-02-13T02:16:30Z","updated_at":"2013-02-13T02:16:30Z","record_template_id":2},{"id":491643,"domain_id":42367,"name":"content.happy-test-25.net","type":"CNAME","content":"contentville.com.","ttl":14400,"prio":null,"change_date":1360721790,"created_at":"2013-02-13T02:16:30Z","updated_at":"2013-02-13T02:16:30Z","record_template_id":3},{"id":491644,"domain_id":42367,"name":"zimbra.happy-test-25.net","type":"CNAME","content":"mail3.happyserver.com","ttl":14400,"prio":null,"change_date":1360721790,"created_at":"2013-02-13T02:16:30Z","updated_at":"2013-02-13T02:16:30Z","record_template_id":4},{"id":491645,"domain_id":42367,"name":"mail.happy-test-25.net","type":"CNAME","content":"mail3.happyserver.com","ttl":14400,"prio":null,"change_date":1360721790,"created_at":"2013-02-13T02:16:30Z","updated_at":"2013-02-13T02:16:30Z","record_template_id":5},{"id":491646,"domain_id":42367,"name":"wwwmail.happy-test-25.net","type":"CNAME","content":"mail3.happyserver.com","ttl":14400,"prio":null,"change_date":1360721790,"created_at":"2013-02-13T02:16:30Z","updated_at":"2013-02-13T02:16:30Z","record_template_id":6},{"id":491647,"domain_id":42367,"name":"assets.happy-test-25.net","type":"CNAME","content":"contentville.com.","ttl":14400,"prio":null,"change_date":1360721790,"created_at":"2013-02-13T02:16:30Z","updated_at":"2013-02-13T02:16:30Z","record_template_id":7},{"id":491648,"domain_id":42367,"name":"happy-test-25.net","type":"A","content":"123.123.217.221","ttl":14400,"prio":null,"change_date":1360721790,"created_at":"2013-02-13T02:16:30Z","updated_at":"2013-02-13T02:16:30Z","record_template_id":8},{"id":491649,"domain_id":42367,"name":"dns2.happy-test-25.net","type":"A","content":"1.1.1.1","ttl":14400,"prio":null,"change_date":1360721790,"created_at":"2013-02-13T02:16:30Z","updated_at":"2013-02-13T02:16:30Z","record_template_id":9},{"id":491650,"domain_id":42367,"name":"dns1.happy-test-25.net","type":"A","content":"123.123.221.223","ttl":14400,"prio":null,"change_date":1360721791,"created_at":"2013-02-13T02:16:31Z","updated_at":"2013-02-13T02:16:31Z","record_template_id":10},{"id":491651,"domain_id":42367,"name":"users.happy-test-25.net","type":"A","content":"123.123.217.221","ttl":14400,"prio":null,"change_date":1360721791,"created_at":"2013-02-13T02:16:31Z","updated_at":"2013-02-13T02:16:31Z","record_template_id":11},{"id":491652,"domain_id":42367,"name":"www4.happy-test-25.net","type":"A","content":"123.123.218.55","ttl":14400,"prio":null,"change_date":1360721791,"created_at":"2013-02-13T02:16:31Z","updated_at":"2013-02-13T02:16:31Z","record_template_id":12},{"id":491653,"domain_id":42367,"name":"monitoring.happy-test-25.net","type":"A","content":"123.123.218.180","ttl":14400,"prio":null,"change_date":1360721791,"created_at":"2013-02-13T02:16:31Z","updated_at":"2013-02-13T02:16:31Z","record_template_id":13},{"id":491654,"domain_id":42367,"name":"dev.happy-test-25.net","type":"A","content":"123.123.218.55","ttl":14400,"prio":null,"change_date":1360721791,"created_at":"2013-02-13T02:16:31Z","updated_at":"2013-02-13T02:16:31Z","record_template_id":14},{"id":491655,"domain_id":42367,"name":"mail2.happy-test-25.net","type":"A","content":"123.123.218.179","ttl":14400,"prio":null,"change_date":1360721791,"created_at":"2013-02-13T02:16:31Z","updated_at":"2013-02-13T02:16:31Z","record_template_id":15},{"id":491656,"domain_id":42367,"name":"secure.happy-test-25.net","type":"A","content":"123.123.217.221","ttl":14400,"prio":null,"change_date":1360721791,"created_at":"2013-02-13T02:16:31Z","updated_at":"2013-02-13T02:16:31Z","record_template_id":16},{"id":491657,"domain_id":42367,"name":"ttt.happy-test-25.net","type":"A","content":"123.123.217.48","ttl":14400,"prio":null,"change_date":1360721791,"created_at":"2013-02-13T02:16:31Z","updated_at":"2013-02-13T02:16:31Z","record_template_id":17},{"id":491658,"domain_id":42367,"name":"a123.happy-test-25.net","type":"A","content":"123.123.218.55","ttl":14400,"prio":null,"change_date":1360721791,"created_at":"2013-02-13T02:16:31Z","updated_at":"2013-02-13T02:16:31Z","record_template_id":18},{"id":491659,"domain_id":42367,"name":"mail3.happy-test-25.net","type":"A","content":"1.1.1.222.0","ttl":14400,"prio":null,"change_date":1360721791,"created_at":"2013-02-13T02:16:31Z","updated_at":"2013-02-13T02:16:31Z","record_template_id":19},{"id":491660,"domain_id":42367,"name":"rrr.happy-test-25.net","type":"A","content":"123.123.218.55","ttl":14400,"prio":null,"change_date":1360721791,"created_at":"2013-02-13T02:16:31Z","updated_at":"2013-02-13T02:16:31Z","record_template_id":20},{"id":491661,"domain_id":42367,"name":"b123.happy-test-25.net","type":"A","content":"123.123.218.55","ttl":14400,"prio":null,"change_date":1360721791,"created_at":"2013-02-13T02:16:31Z","updated_at":"2013-02-13T02:16:31Z","record_template_id":21},{"id":491662,"domain_id":42367,"name":"c123.happy-test-25.net","type":"A","content":"123.123.218.55","ttl":14400,"prio":null,"change_date":1360721791,"created_at":"2013-02-13T02:16:31Z","updated_at":"2013-02-13T02:16:31Z","record_template_id":22},{"id":491663,"domain_id":42367,"name":"api.happy-test-25.net","type":"A","content":"123.123.218.55","ttl":14400,"prio":null,"change_date":1360721791,"created_at":"2013-02-13T02:16:31Z","updated_at":"2013-02-13T02:16:31Z","record_template_id":23},{"id":491664,"domain_id":42367,"name":"tt.happy-test-25.net","type":"A","content":"123.123.217.154","ttl":14400,"prio":null,"change_date":1360721791,"created_at":"2013-02-13T02:16:31Z","updated_at":"2013-02-13T02:16:31Z","record_template_id":24},{"id":491665,"domain_id":42367,"name":"xyz.happy-test-25.net","type":"A","content":"123.123.218.55","ttl":14400,"prio":null,"change_date":1360721791,"created_at":"2013-02-13T02:16:31Z","updated_at":"2013-02-13T02:16:31Z","record_template_id":25},{"id":491666,"domain_id":42367,"name":"users.xyz.happy-test-25.net","type":"A","content":"123.123.218.55","ttl":14400,"prio":null,"change_date":1360721791,"created_at":"2013-02-13T02:16:31Z","updated_at":"2013-02-13T02:16:31Z","record_template_id":26},{"id":491667,"domain_id":42367,"name":"*.happy-test-25.net","type":"A","content":"123.123.217.221","ttl":14400,"prio":null,"change_date":1360721791,"created_at":"2013-02-13T02:16:31Z","updated_at":"2013-02-13T02:16:31Z","record_template_id":27},{"id":491668,"domain_id":42367,"name":"server.happy-test-25.net","type":"A","content":"123.123.218.179","ttl":14400,"prio":null,"change_date":1360721791,"created_at":"2013-02-13T02:16:31Z","updated_at":"2013-02-13T02:16:31Z","record_template_id":28},{"id":491669,"domain_id":42367,"name":"abc.happy-test-25.net","type":"A","content":"123.123.218.55","ttl":14400,"prio":null,"change_date":1360721791,"created_at":"2013-02-13T02:16:31Z","updated_at":"2013-02-13T02:16:31Z","record_template_id":29},{"id":491670,"domain_id":42367,"name":"www6.happy-test-25.net","type":"A","content":"123.123.217.193","ttl":14400,"prio":null,"change_date":1360721791,"created_at":"2013-02-13T02:16:31Z","updated_at":"2013-02-13T02:16:31Z","record_template_id":30},{"id":491671,"domain_id":42367,"name":"www7.happy-test-25.net","type":"A","content":"123.123.217.197","ttl":14400,"prio":null,"change_date":1360721791,"created_at":"2013-02-13T02:16:31Z","updated_at":"2013-02-13T02:16:31Z","record_template_id":31},{"id":491672,"domain_id":42367,"name":"www8.happy-test-25.net","type":"A","content":"123.123.217.205","ttl":14400,"prio":null,"change_date":1360721791,"created_at":"2013-02-13T02:16:31Z","updated_at":"2013-02-13T02:16:31Z","record_template_id":32},{"id":491673,"domain_id":42367,"name":"www9.happy-test-25.net","type":"A","content":"123.123.217.201","ttl":14400,"prio":null,"change_date":1360721791,"created_at":"2013-02-13T02:16:31Z","updated_at":"2013-02-13T02:16:31Z","record_template_id":33},{"id":491674,"domain_id":42367,"name":"*.www4.happy-test-25.net","type":"A","content":"123.123.218.55","ttl":14400,"prio":null,"change_date":1360721791,"created_at":"2013-02-13T02:16:31Z","updated_at":"2013-02-13T02:16:31Z","record_template_id":34},{"id":491675,"domain_id":42367,"name":"*.c123.happy-test-25.net","type":"A","content":"123.123.218.55","ttl":14400,"prio":null,"change_date":1360721791,"created_at":"2013-02-13T02:16:31Z","updated_at":"2013-02-13T02:16:31Z","record_template_id":35},{"id":491676,"domain_id":42367,"name":"*.b123.happy-test-25.net","type":"A","content":"123.123.218.55","ttl":14400,"prio":null,"change_date":1360721791,"created_at":"2013-02-13T02:16:31Z","updated_at":"2013-02-13T02:16:31Z","record_template_id":36},{"id":491677,"domain_id":42367,"name":"*.a123.happy-test-25.net","type":"A","content":"123.123.218.55","ttl":14400,"prio":null,"change_date":1360721791,"created_at":"2013-02-13T02:16:31Z","updated_at":"2013-02-13T02:16:31Z","record_template_id":37},{"id":491678,"domain_id":42367,"name":"*.xyz.happy-test-25.net","type":"A","content":"123.123.218.55","ttl":14400,"prio":null,"change_date":1360721791,"created_at":"2013-02-13T02:16:31Z","updated_at":"2013-02-13T02:16:31Z","record_template_id":38},{"id":491679,"domain_id":42367,"name":"*.abc.happy-test-25.net","type":"A","content":"123.123.218.55","ttl":14400,"prio":null,"change_date":1360721791,"created_at":"2013-02-13T02:16:31Z","updated_at":"2013-02-13T02:16:31Z","record_template_id":39},{"id":491680,"domain_id":42367,"name":"*.dev.happy-test-25.net","type":"A","content":"123.123.218.55","ttl":14400,"prio":null,"change_date":1360721791,"created_at":"2013-02-13T02:16:31Z","updated_at":"2013-02-13T02:16:31Z","record_template_id":40},{"id":491681,"domain_id":42367,"name":"happy-test-25.net","type":"NS","content":"dns1.happyserver.com","ttl":14400,"prio":null,"change_date":1360721791,"created_at":"2013-02-13T02:16:31Z","updated_at":"2013-02-13T02:16:31Z","record_template_id":41},{"id":491682,"domain_id":42367,"name":"happy-test-25.net","type":"NS","content":"dns2.happyserver.com","ttl":14400,"prio":null,"change_date":1360721791,"created_at":"2013-02-13T02:16:31Z","updated_at":"2013-02-13T02:16:31Z","record_template_id":42},{"id":491683,"domain_id":42367,"name":"happy-test-25.net","type":"MX","content":"mail2.happyserver.com","ttl":14400,"prio":30,"change_date":1360721791,"created_at":"2013-02-13T02:16:31Z","updated_at":"2013-02-13T02:16:31Z","record_template_id":43},{"id":491684,"domain_id":42367,"name":"happy-test-25.net","type":"MX","content":"mail3.happyserver.com","ttl":14400,"prio":10,"change_date":1360721791,"created_at":"2013-02-13T02:16:31Z","updated_at":"2013-02-13T02:16:31Z","record_template_id":44},{"id":491685,"domain_id":42367,"name":"ns1.happy-test-25.net","type":"A","content":"123.123.221.223","ttl":3600,"prio":null,"change_date":1360721791,"created_at":"2013-02-13T02:16:31Z","updated_at":"2013-02-13T02:16:31Z","record_template_id":67},{"id":491686,"domain_id":42367,"name":"ns2.happy-test-25.net","type":"A","content":"1.1.1.1","ttl":3600,"prio":null,"change_date":1360721791,"created_at":"2013-02-13T02:16:31Z","updated_at":"2013-02-13T02:16:31Z","record_template_id":68},{"id":491687,"domain_id":42367,"name":"happy-test-25.net","type":"SPF","content":"\"v=spf1
+        ip4:123.123.217.0/24 ip4:123.123.219.0/24 mx a:server.happyserver.com a:mail1.happyserver.com
+        a:mail2.happyserver.com a:mail3.happyserver.com\"","ttl":14400,"prio":null,"change_date":1360721791,"created_at":"2013-02-13T02:16:31Z","updated_at":"2013-02-13T02:16:31Z","record_template_id":69},{"id":491688,"domain_id":42367,"name":"selector._domainkey.happy-test-25.net","type":"TXT","content":"k=rsa;
+        t=s; p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDFkgrf47v+VxveyGtvW0W4eQgZ6EtQ4qA1JSC4DKeHftcG3hRQ2I19JJCbJGv/kStgZlBaEHbSR/frL/9j4bRNxcdAHC1dnpUu5PsltMrflXRwpFbJYFxf1QFrVC+NLwcozUEkj5a3s6JfeMkBVa1xxDVVFUY2BUIV6ghfWVboHQIDAQAB","ttl":14400,"prio":null,"change_date":1360721791,"created_at":"2013-02-13T02:16:31Z","updated_at":"2013-02-13T02:16:31Z","record_template_id":70},{"id":491689,"domain_id":42367,"name":"uploads.happy-test-25.net","type":"CNAME","content":"contentville.com.","ttl":14400,"prio":null,"change_date":1360721791,"created_at":"2013-02-13T02:16:31Z","updated_at":"2013-02-13T02:16:31Z","record_template_id":71},{"id":491690,"domain_id":42367,"name":"happy-test-25.net","type":"TXT","content":"\"v=spf1
+        ip4:123.123.217.0/24 ip4:123.123.219.0/24 mx a:server.happyserver.com a:mail1.happyserver.com
+        a:mail2.happyserver.com a:mail3.happyserver.com\"","ttl":14400,"prio":null,"change_date":1360721791,"created_at":"2013-02-13T02:16:31Z","updated_at":"2013-02-13T02:16:31Z","record_template_id":85},{"id":491691,"domain_id":42367,"name":"www.happy-test-25.net","type":"CNAME","content":"happy-test-25.net","ttl":14400,"prio":null,"change_date":1360721791,"created_at":"2013-02-13T02:16:31Z","updated_at":"2013-02-13T02:16:31Z","record_template_id":46},{"id":491692,"domain_id":42367,"name":"happy-test-25.net","type":"A","content":"123.123.217.221","ttl":14400,"prio":null,"change_date":1360721791,"created_at":"2013-02-13T02:16:31Z","updated_at":"2013-02-13T02:16:31Z","record_template_id":47},{"id":491693,"domain_id":42367,"name":"happy-test-25.net","type":"NS","content":"dns1.happyserver.com.","ttl":14400,"prio":null,"change_date":1360721791,"created_at":"2013-02-13T02:16:31Z","updated_at":"2013-02-13T02:16:31Z","record_template_id":48},{"id":491694,"domain_id":42367,"name":"happy-test-25.net","type":"NS","content":"dns2.happyserver.com.","ttl":14400,"prio":null,"change_date":1360721791,"created_at":"2013-02-13T02:16:31Z","updated_at":"2013-02-13T02:16:31Z","record_template_id":49},{"id":491695,"domain_id":42367,"name":"happy-test-25.net","type":"MX","content":"mail2.happyserver.com.","ttl":14400,"prio":30,"change_date":1360721791,"created_at":"2013-02-13T02:16:31Z","updated_at":"2013-02-13T02:16:31Z","record_template_id":50},{"id":491696,"domain_id":42367,"name":"happy-test-25.net","type":"MX","content":"mail3.happyserver.com.","ttl":14400,"prio":10,"change_date":1360721791,"created_at":"2013-02-13T02:16:31Z","updated_at":"2013-02-13T02:16:31Z","record_template_id":51},{"id":491697,"domain_id":42367,"name":"happy-test-25.net","type":"SPF","content":"\"v=spf1
+        ip4:123.123.217.0/24 ip4:123.123.219.0/24 mx a:server.happyserver.com a:mail1.happyserver.com
+        a:mail2.happyserver.com a:mail3.happyserver.com\"","ttl":3600,"prio":null,"change_date":1360721791,"created_at":"2013-02-13T02:16:31Z","updated_at":"2013-02-13T02:16:31Z","record_template_id":100}],"zone_templates":[{"id":1,"name":"happyserver","ttl":900,"created_at":"2011-01-27T16:37:32Z","updated_at":"2011-01-27T16:37:32Z"},{"id":2,"name":"usersite","ttl":900,"created_at":"2011-01-27T17:50:19Z","updated_at":"2011-01-27T17:50:19Z"}]}'
+    http_version: 
+  recorded_at: Wed, 13 Feb 2013 14:54:33 GMT
+recorded_with: VCR 2.4.0

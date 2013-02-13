@@ -1,0 +1,26 @@
+#!/usr/bin/env ruby
+require 'rubygems'
+require 'optparse'
+require 'rdoc/usage'
+require 'ostruct'
+require 'date'
+
+local_path = File.join(File.dirname(__FILE__), '../', 'lib/powerdns-tools')
+if File.exist?("#{local_path}.rb")
+  require local_path
+else
+  gem 'powerdns-tools'
+end
+
+opts = OptionParser.new
+opts.on('-s', '--server [ARG]')    { |s| Powerdns.server = s }
+opts.on('-z', '--zone [ARG]')    { |zt| @zone_template = zt }
+opts.parse!(ARGV)
+
+if @zone_template.to_i == 0
+  @zt = Powerdns::ZoneTemplate.query(@zone_template)
+else 
+  @zt = Powerdns::ZoneTemplate.find(@zone_template) 
+end
+
+@zt.destroy unless @zt.nil?

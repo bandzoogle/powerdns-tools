@@ -1,0 +1,23 @@
+#!/usr/bin/env ruby
+require 'optparse'
+require 'powerdns-tools'
+
+args = {}
+
+#
+# parse our options before loading the gem so we can set any API params first
+#
+opts = OptionParser.new
+opts.on('-s', '--server [ARG]')    { |s| ENV["POWERDNS_API_URL"] = s }
+opts.on('-d', '--domain [ARG]')    { |d| @domain = d }
+opts.on('-t', '--type [ARG]')    { |t| @type = t }
+opts.on('-c', '--content [ARG]')    { |c| @content = c }
+opts.on('-n', '--name [ARG]')    { |n| args[:name] = n }
+opts.on('-l', '--ttl [ARG]')    { |t| args[:ttl] = t.to_i }
+opts.on('-p', '--prio [ARG]')    { |p| args[:prio] = p.to_i }
+
+opts.parse!(ARGV)
+
+@d = Powerdns::Domain.query(@domain)
+puts @d.add_record(@type, @content, args)
+

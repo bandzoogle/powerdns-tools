@@ -1,0 +1,46 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://abcdefghijklmnopqrstuvwxyz:@powerdns-server.com/zone_templates.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 222.0
+      message: ! 'OK '
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge
+      Etag:
+      - ! '"e72f50ba199a336531d2f7ca5fb5bdf0"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 696c9922d19bf103a77e096ecdb9dc11
+      X-Runtime:
+      - '0.018424'
+      Server:
+      - WEBrick/1.3.1 (Ruby/1.9.3/2012-10-12)
+      Date:
+      - Wed, 13 Feb 2013 14:23:18 GMT
+      Content-Length:
+      - '664'
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: US-ASCII
+      string: ! '[{"created_at":"2011-03-01T21:53:22Z","id":5,"name":"engineyard","ttl":14400,"updated_at":"2011-03-01T21:53:22Z"},{"created_at":"2011-01-27T17:50:36Z","id":3,"name":"godaddy","ttl":900,"updated_at":"2011-01-27T17:50:36Z"},{"created_at":"2011-02-17T19:44:07Z","id":4,"name":"google","ttl":14400,"updated_at":"2011-02-17T19:44:07Z"},{"created_at":"2011-01-27T16:37:32Z","id":1,"name":"happyserver","ttl":900,"updated_at":"2011-01-27T16:37:32Z"},{"created_at":"2011-01-27T17:50:19Z","id":2,"name":"usersite","ttl":900,"updated_at":"2011-01-27T17:50:19Z"},{"created_at":"2012-10-04T13:33:41Z","id":6,"name":"zooglelabs","ttl":14400,"updated_at":"2012-10-04T13:33:41Z"}]'
+    http_version: 
+  recorded_at: Wed, 13 Feb 2013 14:23:18 GMT
+recorded_with: VCR 2.4.0

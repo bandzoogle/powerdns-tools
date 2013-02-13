@@ -1,0 +1,12 @@
+#!/usr/bin/env ruby
+require 'optparse'
+require 'powerdns-tools'
+
+opts = OptionParser.new
+opts.on('-s', '--server [ARG]')    { |s| @server = s }
+opts.on('-v', '--verbose')    		 { @verbose = true }
+opts.parse!(ARGV)
+
+Powerdns::ZoneTemplate.all.each { |zt|
+  puts "#{zt.id}\t#{zt.name}"
+}

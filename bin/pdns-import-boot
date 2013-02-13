@@ -1,0 +1,63 @@
+#!/usr/bin/env ruby
+require 'rubygems'
+require 'optparse'
+require 'rdoc/usage'
+require 'ostruct'
+require 'date'
+require 'csv'
+
+require 'zonefile'
+
+local_path = File.join(File.dirname(__FILE__), '../', 'lib/powerdns-tools')
+if File.exist?("#{local_path}.rb")
+  puts "using local copy of code for testing"
+  require local_path
+else
+  gem 'powerdns-tools'
+end
+
+opts = OptionParser.new
+opts.on('-s', '--server [ARG]')    { |s| Powerdns.server = s }
+opts.on('-t', '--template [ARG]')    { |zt| @zone_name = zt }
+opts.parse!(ARGV)
+
+
+def template(z)
+  if ["0brtemplate.local.dns", "0bztemplate.local.dns",
+      "0conttemplate.local.dns", "0landtemplate.local.dns",
+      "0rntemplate.local.dns", "0startemplate.local.dns"].include?(z)
+    "usersite"
+  elsif ["bandzoogle.com.dns", "horsezoogle.com.dns",
+         "landscaparoo.com.dns", "landscaporoo.com.dns"].include?(z)
+    "zoogle"
+  elsif ["edithgrove.com.dns", "freelanceretrievers.com.dns", "0bz-mxlogic-template.local.dns", "0bz-pioneerwine.local.dns"].include?(z)
+    "custom"
+  elsif z == "0bz-godaddy-template.local.dns"
+    "godaddy"
+#  elsif z == "0bz-googleapps-template.local.dns"
+#    "google"
+  elsif["ZoneFile", "0bz-r4l-template.local.dns",
+        "0bz-yahoo-template.local.dns", "0bz-mailix-template.local.dns",
+        "0bz-telivo-template.local.dns","0bz-dotsterhost-template.local.dns",
+        "arbitrarydomainname.com.dns"].include?(z)
+    "skip"
+  else
+    "unknown"
+  end    
+end
+
+CSV.foreach("zonelist.csv") do |row|
+  domain = row[0]
+  zone = row[3]
+  zone_template = template(zone)
+
+  if domain == "<root>" || domain =~ /\.local$/ 
+    puts "SKIP #{domain}"
+  elsif zone_template == "custom"
+
+  elsif zone_template != "skip"
+    puts "CREATE #{domain} #{zone_template}"
+   zt = Powerdns::ZoneTemplate.query(zone_template)
+    domain = Powerdns::Domain.create(:zone_template_id => zt.id, :name => domain)
+  end
+end
