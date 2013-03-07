@@ -1,0 +1,208 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://1271ed5ef305aadabc605b1609e24c52:@localhost:3000/registrations/new/transfer.json
+    body:
+      encoding: US-ASCII
+      string: ! '{"registration":{"name":"new-domain123.net"}}'
+    headers:
+      Content-Type:
+      - application/json
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 500
+      message: ! 'Internal Server Error '
+    headers:
+      Content-Type:
+      - text/html; charset=utf-8
+      Content-Length:
+      - '15702'
+      X-Request-Id:
+      - f8c21fb0d5eb90b455fd076effd1f028
+      X-Runtime:
+      - '0.749200'
+      Server:
+      - WEBrick/1.3.1 (Ruby/1.9.3/2012-11-10)
+      Date:
+      - Thu, 07 Mar 2013 02:26:05 GMT
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: US-ASCII
+      string: ! "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\"
+        />\n  <title>Action Controller: Exception caught</title>\n  <style>\n    body
+        { background-color: #fff; color: #333; }\n\n    body, p, ol, ul, td {\n      font-family:
+        helvetica, verdana, arial, sans-serif;\n      font-size:   13px;\n      line-height:
+        18px;\n    }\n\n    pre {\n      background-color: #eee;\n      padding: 10px;\n
+        \     font-size: 11px;\n      white-space: pre-wrap;\n    }\n\n    a { color:
+        #000; }\n    a:visited { color: #666; }\n    a:hover { color: #fff; background-color:#000;
+        }\n  </style>\n</head>\n<body>\n\n<h1>\n  Enom::Error\n    in RegistrationsController#transfer\n</h1>\n<pre>An
+        error occurred: FirstName is required to update contact info</pre>\n\n\n<p><code>Rails.root:
+        /home/colin/Zoogle/powerdns-tweaked</code></p>\n\n<div id=\"traces\">\n    <a
+        href=\"#\" onclick=\"document.getElementById(&#x27;Framework-Trace&#x27;).style.display=&#x27;none&#x27;;document.getElementById(&#x27;Full-Trace&#x27;).style.display=&#x27;none&#x27;;document.getElementById(&#x27;Application-Trace&#x27;).style.display=&#x27;block&#x27;;;
+        return false;\">Application Trace</a> |\n    <a href=\"#\" onclick=\"document.getElementById(&#x27;Application-Trace&#x27;).style.display=&#x27;none&#x27;;document.getElementById(&#x27;Full-Trace&#x27;).style.display=&#x27;none&#x27;;document.getElementById(&#x27;Framework-Trace&#x27;).style.display=&#x27;block&#x27;;;
+        return false;\">Framework Trace</a> |\n    <a href=\"#\" onclick=\"document.getElementById(&#x27;Application-Trace&#x27;).style.display=&#x27;none&#x27;;document.getElementById(&#x27;Framework-Trace&#x27;).style.display=&#x27;none&#x27;;document.getElementById(&#x27;Full-Trace&#x27;).style.display=&#x27;block&#x27;;;
+        return false;\">Full Trace</a> \n\n    <div id=\"Application-Trace\" style=\"display:
+        block;\">\n      <pre><code>app/controllers/registrations_controller.rb:33:in
+        `transfer&#x27;</code></pre>\n    </div>\n    <div id=\"Framework-Trace\"
+        style=\"display: none;\">\n      <pre><code>/home/colin/.rvm/gems/ruby-1.9.3-p327/bundler/gems/enom-e3c80c600985/lib/enom/contact_info.rb:47:in
+        `block (3 levels) in &lt;module:ContactInfo&gt;&#x27;\n/home/colin/.rvm/gems/ruby-1.9.3-p327/bundler/gems/enom-e3c80c600985/lib/enom/contact_info.rb:44:in
+        `each&#x27;\n/home/colin/.rvm/gems/ruby-1.9.3-p327/bundler/gems/enom-e3c80c600985/lib/enom/contact_info.rb:44:in
+        `block (2 levels) in &lt;module:ContactInfo&gt;&#x27;\n/home/colin/.rvm/gems/ruby-1.9.3-p327/bundler/gems/enom-e3c80c600985/lib/enom/contact_info.rb:72:in
+        `block in update_all_contact_info&#x27;\n/home/colin/.rvm/gems/ruby-1.9.3-p327/bundler/gems/enom-e3c80c600985/lib/enom/contact_info.rb:71:in
+        `each&#x27;\n/home/colin/.rvm/gems/ruby-1.9.3-p327/bundler/gems/enom-e3c80c600985/lib/enom/contact_info.rb:71:in
+        `update_all_contact_info&#x27;\nactionpack (3.2.12) lib/action_controller/metal/implicit_render.rb:4:in
+        `send_action&#x27;\nactionpack (3.2.12) lib/abstract_controller/base.rb:167:in
+        `process_action&#x27;\nactionpack (3.2.12) lib/action_controller/metal/rendering.rb:10:in
+        `process_action&#x27;\nactionpack (3.2.12) lib/abstract_controller/callbacks.rb:18:in
+        `block in process_action&#x27;\nactivesupport (3.2.12) lib/active_support/callbacks.rb:425:in
+        `_run__266188301629245546__process_action__3190368306827922479__callbacks&#x27;\nactivesupport
+        (3.2.12) lib/active_support/callbacks.rb:405:in `__run_callback&#x27;\nactivesupport
+        (3.2.12) lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks&#x27;\nactivesupport
+        (3.2.12) lib/active_support/callbacks.rb:81:in `run_callbacks&#x27;\nactionpack
+        (3.2.12) lib/abstract_controller/callbacks.rb:17:in `process_action&#x27;\nactionpack
+        (3.2.12) lib/action_controller/metal/rescue.rb:29:in `process_action&#x27;\nactionpack
+        (3.2.12) lib/action_controller/metal/instrumentation.rb:30:in `block in process_action&#x27;\nactivesupport
+        (3.2.12) lib/active_support/notifications.rb:123:in `block in instrument&#x27;\nactivesupport
+        (3.2.12) lib/active_support/notifications/instrumenter.rb:20:in `instrument&#x27;\nactivesupport
+        (3.2.12) lib/active_support/notifications.rb:123:in `instrument&#x27;\nactionpack
+        (3.2.12) lib/action_controller/metal/instrumentation.rb:29:in `process_action&#x27;\nactionpack
+        (3.2.12) lib/action_controller/metal/params_wrapper.rb:207:in `process_action&#x27;\nactiverecord
+        (3.2.12) lib/active_record/railties/controller_runtime.rb:18:in `process_action&#x27;\nactionpack
+        (3.2.12) lib/abstract_controller/base.rb:121:in `process&#x27;\nactionpack
+        (3.2.12) lib/abstract_controller/rendering.rb:45:in `process&#x27;\nactionpack
+        (3.2.12) lib/action_controller/metal.rb:203:in `dispatch&#x27;\nactionpack
+        (3.2.12) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch&#x27;\nactionpack
+        (3.2.12) lib/action_controller/metal.rb:246:in `block in action&#x27;\nactionpack
+        (3.2.12) lib/action_dispatch/routing/route_set.rb:73:in `call&#x27;\nactionpack
+        (3.2.12) lib/action_dispatch/routing/route_set.rb:73:in `dispatch&#x27;\nactionpack
+        (3.2.12) lib/action_dispatch/routing/route_set.rb:36:in `call&#x27;\njourney
+        (1.0.4) lib/journey/router.rb:68:in `block in call&#x27;\njourney (1.0.4)
+        lib/journey/router.rb:56:in `each&#x27;\njourney (1.0.4) lib/journey/router.rb:56:in
+        `call&#x27;\nactionpack (3.2.12) lib/action_dispatch/routing/route_set.rb:601:in
+        `call&#x27;\nactionpack (3.2.12) lib/action_dispatch/middleware/best_standards_support.rb:17:in
+        `call&#x27;\nrack (1.4.5) lib/rack/etag.rb:23:in `call&#x27;\nrack (1.4.5)
+        lib/rack/conditionalget.rb:35:in `call&#x27;\nactionpack (3.2.12) lib/action_dispatch/middleware/head.rb:14:in
+        `call&#x27;\nactionpack (3.2.12) lib/action_dispatch/middleware/params_parser.rb:21:in
+        `call&#x27;\nactionpack (3.2.12) lib/action_dispatch/middleware/flash.rb:242:in
+        `call&#x27;\nrack (1.4.5) lib/rack/session/abstract/id.rb:210:in `context&#x27;\nrack
+        (1.4.5) lib/rack/session/abstract/id.rb:205:in `call&#x27;\nactionpack (3.2.12)
+        lib/action_dispatch/middleware/cookies.rb:341:in `call&#x27;\nactiverecord
+        (3.2.12) lib/active_record/query_cache.rb:64:in `call&#x27;\nactiverecord
+        (3.2.12) lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in
+        `call&#x27;\nactionpack (3.2.12) lib/action_dispatch/middleware/callbacks.rb:28:in
+        `block in call&#x27;\nactivesupport (3.2.12) lib/active_support/callbacks.rb:405:in
+        `_run__1133910920355946203__call__3900398722554174226__callbacks&#x27;\nactivesupport
+        (3.2.12) lib/active_support/callbacks.rb:405:in `__run_callback&#x27;\nactivesupport
+        (3.2.12) lib/active_support/callbacks.rb:385:in `_run_call_callbacks&#x27;\nactivesupport
+        (3.2.12) lib/active_support/callbacks.rb:81:in `run_callbacks&#x27;\nactionpack
+        (3.2.12) lib/action_dispatch/middleware/callbacks.rb:27:in `call&#x27;\nactionpack
+        (3.2.12) lib/action_dispatch/middleware/reloader.rb:65:in `call&#x27;\nactionpack
+        (3.2.12) lib/action_dispatch/middleware/remote_ip.rb:31:in `call&#x27;\nactionpack
+        (3.2.12) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call&#x27;\nactionpack
+        (3.2.12) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call&#x27;\nrailties
+        (3.2.12) lib/rails/rack/logger.rb:32:in `call_app&#x27;\nrailties (3.2.12)
+        lib/rails/rack/logger.rb:16:in `block in call&#x27;\nactivesupport (3.2.12)
+        lib/active_support/tagged_logging.rb:22:in `tagged&#x27;\nrailties (3.2.12)
+        lib/rails/rack/logger.rb:16:in `call&#x27;\nactionpack (3.2.12) lib/action_dispatch/middleware/request_id.rb:22:in
+        `call&#x27;\nrack (1.4.5) lib/rack/methodoverride.rb:21:in `call&#x27;\nrack
+        (1.4.5) lib/rack/runtime.rb:17:in `call&#x27;\nactivesupport (3.2.12) lib/active_support/cache/strategy/local_cache.rb:72:in
+        `call&#x27;\nrack (1.4.5) lib/rack/lock.rb:15:in `call&#x27;\nactionpack (3.2.12)
+        lib/action_dispatch/middleware/static.rb:62:in `call&#x27;\nrailties (3.2.12)
+        lib/rails/engine.rb:479:in `call&#x27;\nrailties (3.2.12) lib/rails/application.rb:223:in
+        `call&#x27;\nrack (1.4.5) lib/rack/content_length.rb:14:in `call&#x27;\nrailties
+        (3.2.12) lib/rails/rack/log_tailer.rb:17:in `call&#x27;\nrack (1.4.5) lib/rack/handler/webrick.rb:59:in
+        `service&#x27;\n/home/colin/.rvm/rubies/ruby-1.9.3-p327/lib/ruby/1.9.1/webrick/httpserver.rb:138:in
+        `service&#x27;\n/home/colin/.rvm/rubies/ruby-1.9.3-p327/lib/ruby/1.9.1/webrick/httpserver.rb:94:in
+        `run&#x27;\n/home/colin/.rvm/rubies/ruby-1.9.3-p327/lib/ruby/1.9.1/webrick/server.rb:191:in
+        `block in start_thread&#x27;</code></pre>\n    </div>\n    <div id=\"Full-Trace\"
+        style=\"display: none;\">\n      <pre><code>/home/colin/.rvm/gems/ruby-1.9.3-p327/bundler/gems/enom-e3c80c600985/lib/enom/contact_info.rb:47:in
+        `block (3 levels) in &lt;module:ContactInfo&gt;&#x27;\n/home/colin/.rvm/gems/ruby-1.9.3-p327/bundler/gems/enom-e3c80c600985/lib/enom/contact_info.rb:44:in
+        `each&#x27;\n/home/colin/.rvm/gems/ruby-1.9.3-p327/bundler/gems/enom-e3c80c600985/lib/enom/contact_info.rb:44:in
+        `block (2 levels) in &lt;module:ContactInfo&gt;&#x27;\n/home/colin/.rvm/gems/ruby-1.9.3-p327/bundler/gems/enom-e3c80c600985/lib/enom/contact_info.rb:72:in
+        `block in update_all_contact_info&#x27;\n/home/colin/.rvm/gems/ruby-1.9.3-p327/bundler/gems/enom-e3c80c600985/lib/enom/contact_info.rb:71:in
+        `each&#x27;\n/home/colin/.rvm/gems/ruby-1.9.3-p327/bundler/gems/enom-e3c80c600985/lib/enom/contact_info.rb:71:in
+        `update_all_contact_info&#x27;\napp/controllers/registrations_controller.rb:33:in
+        `transfer&#x27;\nactionpack (3.2.12) lib/action_controller/metal/implicit_render.rb:4:in
+        `send_action&#x27;\nactionpack (3.2.12) lib/abstract_controller/base.rb:167:in
+        `process_action&#x27;\nactionpack (3.2.12) lib/action_controller/metal/rendering.rb:10:in
+        `process_action&#x27;\nactionpack (3.2.12) lib/abstract_controller/callbacks.rb:18:in
+        `block in process_action&#x27;\nactivesupport (3.2.12) lib/active_support/callbacks.rb:425:in
+        `_run__266188301629245546__process_action__3190368306827922479__callbacks&#x27;\nactivesupport
+        (3.2.12) lib/active_support/callbacks.rb:405:in `__run_callback&#x27;\nactivesupport
+        (3.2.12) lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks&#x27;\nactivesupport
+        (3.2.12) lib/active_support/callbacks.rb:81:in `run_callbacks&#x27;\nactionpack
+        (3.2.12) lib/abstract_controller/callbacks.rb:17:in `process_action&#x27;\nactionpack
+        (3.2.12) lib/action_controller/metal/rescue.rb:29:in `process_action&#x27;\nactionpack
+        (3.2.12) lib/action_controller/metal/instrumentation.rb:30:in `block in process_action&#x27;\nactivesupport
+        (3.2.12) lib/active_support/notifications.rb:123:in `block in instrument&#x27;\nactivesupport
+        (3.2.12) lib/active_support/notifications/instrumenter.rb:20:in `instrument&#x27;\nactivesupport
+        (3.2.12) lib/active_support/notifications.rb:123:in `instrument&#x27;\nactionpack
+        (3.2.12) lib/action_controller/metal/instrumentation.rb:29:in `process_action&#x27;\nactionpack
+        (3.2.12) lib/action_controller/metal/params_wrapper.rb:207:in `process_action&#x27;\nactiverecord
+        (3.2.12) lib/active_record/railties/controller_runtime.rb:18:in `process_action&#x27;\nactionpack
+        (3.2.12) lib/abstract_controller/base.rb:121:in `process&#x27;\nactionpack
+        (3.2.12) lib/abstract_controller/rendering.rb:45:in `process&#x27;\nactionpack
+        (3.2.12) lib/action_controller/metal.rb:203:in `dispatch&#x27;\nactionpack
+        (3.2.12) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch&#x27;\nactionpack
+        (3.2.12) lib/action_controller/metal.rb:246:in `block in action&#x27;\nactionpack
+        (3.2.12) lib/action_dispatch/routing/route_set.rb:73:in `call&#x27;\nactionpack
+        (3.2.12) lib/action_dispatch/routing/route_set.rb:73:in `dispatch&#x27;\nactionpack
+        (3.2.12) lib/action_dispatch/routing/route_set.rb:36:in `call&#x27;\njourney
+        (1.0.4) lib/journey/router.rb:68:in `block in call&#x27;\njourney (1.0.4)
+        lib/journey/router.rb:56:in `each&#x27;\njourney (1.0.4) lib/journey/router.rb:56:in
+        `call&#x27;\nactionpack (3.2.12) lib/action_dispatch/routing/route_set.rb:601:in
+        `call&#x27;\nactionpack (3.2.12) lib/action_dispatch/middleware/best_standards_support.rb:17:in
+        `call&#x27;\nrack (1.4.5) lib/rack/etag.rb:23:in `call&#x27;\nrack (1.4.5)
+        lib/rack/conditionalget.rb:35:in `call&#x27;\nactionpack (3.2.12) lib/action_dispatch/middleware/head.rb:14:in
+        `call&#x27;\nactionpack (3.2.12) lib/action_dispatch/middleware/params_parser.rb:21:in
+        `call&#x27;\nactionpack (3.2.12) lib/action_dispatch/middleware/flash.rb:242:in
+        `call&#x27;\nrack (1.4.5) lib/rack/session/abstract/id.rb:210:in `context&#x27;\nrack
+        (1.4.5) lib/rack/session/abstract/id.rb:205:in `call&#x27;\nactionpack (3.2.12)
+        lib/action_dispatch/middleware/cookies.rb:341:in `call&#x27;\nactiverecord
+        (3.2.12) lib/active_record/query_cache.rb:64:in `call&#x27;\nactiverecord
+        (3.2.12) lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in
+        `call&#x27;\nactionpack (3.2.12) lib/action_dispatch/middleware/callbacks.rb:28:in
+        `block in call&#x27;\nactivesupport (3.2.12) lib/active_support/callbacks.rb:405:in
+        `_run__1133910920355946203__call__3900398722554174226__callbacks&#x27;\nactivesupport
+        (3.2.12) lib/active_support/callbacks.rb:405:in `__run_callback&#x27;\nactivesupport
+        (3.2.12) lib/active_support/callbacks.rb:385:in `_run_call_callbacks&#x27;\nactivesupport
+        (3.2.12) lib/active_support/callbacks.rb:81:in `run_callbacks&#x27;\nactionpack
+        (3.2.12) lib/action_dispatch/middleware/callbacks.rb:27:in `call&#x27;\nactionpack
+        (3.2.12) lib/action_dispatch/middleware/reloader.rb:65:in `call&#x27;\nactionpack
+        (3.2.12) lib/action_dispatch/middleware/remote_ip.rb:31:in `call&#x27;\nactionpack
+        (3.2.12) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call&#x27;\nactionpack
+        (3.2.12) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call&#x27;\nrailties
+        (3.2.12) lib/rails/rack/logger.rb:32:in `call_app&#x27;\nrailties (3.2.12)
+        lib/rails/rack/logger.rb:16:in `block in call&#x27;\nactivesupport (3.2.12)
+        lib/active_support/tagged_logging.rb:22:in `tagged&#x27;\nrailties (3.2.12)
+        lib/rails/rack/logger.rb:16:in `call&#x27;\nactionpack (3.2.12) lib/action_dispatch/middleware/request_id.rb:22:in
+        `call&#x27;\nrack (1.4.5) lib/rack/methodoverride.rb:21:in `call&#x27;\nrack
+        (1.4.5) lib/rack/runtime.rb:17:in `call&#x27;\nactivesupport (3.2.12) lib/active_support/cache/strategy/local_cache.rb:72:in
+        `call&#x27;\nrack (1.4.5) lib/rack/lock.rb:15:in `call&#x27;\nactionpack (3.2.12)
+        lib/action_dispatch/middleware/static.rb:62:in `call&#x27;\nrailties (3.2.12)
+        lib/rails/engine.rb:479:in `call&#x27;\nrailties (3.2.12) lib/rails/application.rb:223:in
+        `call&#x27;\nrack (1.4.5) lib/rack/content_length.rb:14:in `call&#x27;\nrailties
+        (3.2.12) lib/rails/rack/log_tailer.rb:17:in `call&#x27;\nrack (1.4.5) lib/rack/handler/webrick.rb:59:in
+        `service&#x27;\n/home/colin/.rvm/rubies/ruby-1.9.3-p327/lib/ruby/1.9.1/webrick/httpserver.rb:138:in
+        `service&#x27;\n/home/colin/.rvm/rubies/ruby-1.9.3-p327/lib/ruby/1.9.1/webrick/httpserver.rb:94:in
+        `run&#x27;\n/home/colin/.rvm/rubies/ruby-1.9.3-p327/lib/ruby/1.9.1/webrick/server.rb:191:in
+        `block in start_thread&#x27;</code></pre>\n    </div>\n</div>\n\n\n\n<h2 style=\"margin-top:
+        30px\">Request</h2>\n<p><b>Parameters</b>: <pre>{&quot;registration&quot;=&gt;{},\n
+        &quot;registration_id&quot;=&gt;&quot;new&quot;,\n &quot;format&quot;=&gt;&quot;json&quot;}</pre></p>\n\n<p><a
+        href=\"#\" onclick=\"document.getElementById('session_dump').style.display='block';
+        return false;\">Show session dump</a></p>\n<div id=\"session_dump\" style=\"display:none\"><pre></pre></div>\n\n<p><a
+        href=\"#\" onclick=\"document.getElementById('env_dump').style.display='block';
+        return false;\">Show env dump</a></p>\n<div id=\"env_dump\" style=\"display:none\"><pre>GATEWAY_INTERFACE:
+        &quot;CGI/1.1&quot;\nHTTP_ACCEPT: &quot;*/*&quot;\nREMOTE_ADDR: &quot;127.0.0.1&quot;\nREMOTE_HOST:
+        &quot;localhost&quot;\nSERVER_NAME: &quot;localhost&quot;\nSERVER_PROTOCOL:
+        &quot;HTTP/1.1&quot;</pre></div>\n\n\n<h2 style=\"margin-top: 30px\">Response</h2>\n<p><b>Headers</b>:
+        <pre>None</pre></p>\n\n\n\n</body>\n</html>\n"
+    http_version: 
+  recorded_at: Thu, 07 Mar 2013 02:26:05 GMT
+recorded_with: VCR 2.4.0

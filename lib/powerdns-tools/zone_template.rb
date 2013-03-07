@@ -39,7 +39,6 @@ module Powerdns
         zf.records.each { |type, entries| 
           entries.each { |e|
             type = type.to_s.upcase
-            #puts "#{type} #{e.inspect}"
             @zt.add_record(type, e[:name], e[:host], {:ttl => e[:ttl], :prio => e[:pri]})
           }
         }

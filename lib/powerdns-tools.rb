@@ -40,5 +40,6 @@ module Powerdns
     require "#{code_path}/powerdns-tools/version.rb"
     require "#{code_path}/powerdns-tools/zone_template.rb"
     require "#{code_path}/powerdns-tools/domain.rb"
+    require "#{code_path}/powerdns-tools/registration.rb"
   end
 end

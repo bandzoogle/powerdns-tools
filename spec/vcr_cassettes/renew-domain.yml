@@ -1,0 +1,46 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://1271ed5ef305aadabc605b1609e24c52:@localhost:3000/registrations/new/renew.json
+    body:
+      encoding: US-ASCII
+      string: ! '{"registration":{"name":"new-domain1.net"}}'
+    headers:
+      Content-Type:
+      - application/json
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: ! 'OK '
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge
+      Etag:
+      - ! '"af85863c8fc2c390773a922c821d62f5"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 072ca52a2d01f24b288ef158929cd3c6
+      X-Runtime:
+      - '4.972537'
+      Server:
+      - WEBrick/1.3.1 (Ruby/1.9.3/2012-11-10)
+      Date:
+      - Thu, 07 Mar 2013 02:29:34 GMT
+      Content-Length:
+      - '143'
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: US-ASCII
+      string: ! '{"name":"new-domain1.net","sld":"new-domain1","tld":"net","expiration_date":"2015-03-06","nameservers":null,"registration_status":"Registered"}'
+    http_version: 
+  recorded_at: Thu, 07 Mar 2013 02:29:34 GMT
+recorded_with: VCR 2.4.0
