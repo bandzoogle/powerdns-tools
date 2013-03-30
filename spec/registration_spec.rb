@@ -5,6 +5,16 @@ describe Powerdns::Registration do
 		setup_powerdns
 	end
 
+	describe "Querying a domain" do
+		it "should work" do
+			VCR.use_cassette('query-domain', :record => :new_episodes) do
+				@result = Powerdns::Registration.query("new-domain1.net")
+			end
+			@result.name.should == "new-domain1.net"
+			@result.expiration_date.should == "2015-03-06"
+		end
+	end
+
 	describe "Registering a domain" do
 		before(:each) do
       @opts = {

@@ -10,6 +10,10 @@ module Powerdns
         Registration.user = Powerdns.api_key
       end
 
+      def query(d)
+        find(:one, :from => "/registrations.json", :params => {:api_key => Registration.user, :name => d})
+      end
+
       def register(name, opts)
         create(opts.merge(name:name))
       end
