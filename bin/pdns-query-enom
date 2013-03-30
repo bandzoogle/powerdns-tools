@@ -1,0 +1,19 @@
+#!/usr/bin/env ruby
+require 'optparse'
+require 'powerdns-tools'
+
+#
+# parse our options before loading the gem so we can set any API params first
+#
+opts = OptionParser.new
+opts.on('-s', '--server [ARG]')    { |s| ENV["POWERDNS_API_URL"] = s }
+opts.parse!(ARGV)
+
+raise "Please setup site_base/api_key" unless Powerdns.site_base && Powerdns.api_key
+
+@domain = ARGV.first.chomp
+
+puts Powerdns::Registration.query(@domain).inspect
+
+# @dns = Powerdns::Domain.query(@domain)
+# puts @dns
