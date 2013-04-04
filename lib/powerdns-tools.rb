@@ -27,6 +27,7 @@ module Powerdns
       Powerdns::Domain::Record.reset_key!
       Powerdns::ZoneTemplate.reset_key!
       Powerdns::ZoneTemplate::RecordTemplate.reset_key!
+      Powerdns::Registration.reset_key!
 
       true
     end
