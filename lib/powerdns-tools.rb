@@ -28,6 +28,7 @@ module Powerdns
       Powerdns::ZoneTemplate.reset_key!
       Powerdns::ZoneTemplate::RecordTemplate.reset_key!
       Powerdns::Registration.reset_key!
+      Powerdns::Record.reset_key!
 
       true
     end
@@ -42,5 +43,6 @@ module Powerdns
     require "#{code_path}/powerdns-tools/zone_template.rb"
     require "#{code_path}/powerdns-tools/domain.rb"
     require "#{code_path}/powerdns-tools/registration.rb"
+    require "#{code_path}/powerdns-tools/record.rb"
   end
 end
