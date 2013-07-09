@@ -22,7 +22,7 @@ Gem::Specification.new do |s|
   s.add_dependency('zonefile', "~> 1.04")
   s.add_dependency('activeresource', "~> 3.2.12")
   s.add_dependency('activesupport', "~> 3.2.12")
-  s.add_dependency 'psych', "1.3.4"
+  s.add_dependency 'psych'
 
   s.add_dependency("pry")
 
