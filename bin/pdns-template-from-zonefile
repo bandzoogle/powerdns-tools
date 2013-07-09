@@ -1,19 +1,11 @@
 #!/usr/bin/env ruby
-require 'rubygems'
 require 'optparse'
+require 'powerdns-tools'
 
 opts = OptionParser.new
 opts.on('-s', '--server [ARG]')    { |s| Powerdns.server = s }
 opts.on('-t', '--template [ARG]')    { |zt| @zone_name = zt }
 opts.parse!(ARGV)
-
-local_path = File.join(File.dirname(__FILE__), '../', 'lib/powerdns-tools')
-if File.exist?("#{local_path}.rb")
-  puts "using local copy of code for testing"
-  require local_path
-else
-  gem 'powerdns-tools'
-end
 
 raise "Please setup site_base/api_key" unless Powerdns.site_base && Powerdns.api_key
 

@@ -22,15 +22,15 @@ Gem::Specification.new do |s|
   s.add_dependency('zonefile', "~> 1.04")
   s.add_dependency('activeresource', "~> 3.2.12")
   s.add_dependency('activesupport', "~> 3.2.12")
-  s.add_dependency 'psych', '1.3.4'
+  s.add_dependency 'psych', "1.3.4"
 
   s.add_dependency("pry")
 
   s.add_development_dependency(%q<rake>, [">= 0"])
   s.add_development_dependency(%q<rspec>, [">= 2.12.0"])
   s.add_development_dependency(%q<rdoc>, [">= 0"])
-  s.add_development_dependency(%q<vcr>, [">= 0"])
-  s.add_development_dependency(%q<webmock>, [">= 0"])
+  s.add_development_dependency(%q<vcr>, [">= 2.5.0"])
+  s.add_development_dependency(%q<webmock>, ["1.11.0"])
   s.add_development_dependency(%q<simplecov>, [">= 0"])
 
 end

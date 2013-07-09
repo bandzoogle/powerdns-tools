@@ -16,7 +16,7 @@ module Powerdns
 
       def add(d, zt)
         attrs = {name: d, zone_template_name: zt}
-        create(attrs)
+        puts create(attrs).inspect
         query(d)
       end
 
@@ -26,7 +26,7 @@ module Powerdns
       end
     end
 
-    def to_s
+    def as_string
       header = [";;", name, "id: #{id}",
        "created: #{created_at}",
        "updated #{updated_at}"].join(" ") + "\n"

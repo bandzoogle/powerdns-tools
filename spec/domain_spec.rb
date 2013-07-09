@@ -91,7 +91,7 @@ describe Powerdns::Domain do
 		it "should return the domain when it exists" do
 			VCR.use_cassette('query-happyserver') do
 				@dns = Powerdns::Domain.query("happyserver.com")
-				@dns.to_s.should include("www.happyserver.com")
+				@dns.as_string.should include("www.happyserver.com")
 			end
 		end
 
