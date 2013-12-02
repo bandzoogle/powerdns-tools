@@ -10,8 +10,12 @@ module Powerdns
         Domain.user = Powerdns.api_key
       end
 
-      def query(d)
-        find(:one, :from => "/domains.json", :params => {:api_key => Domain.user, :name => d})
+      def query(d, include_records = true)
+        base = "/domains.json"
+        if include_records == false
+          base = "#{base}?skip_records=true"
+        end
+        find(:one, :from => base, :params => {:api_key => Domain.user, :name => d})
       end
 
       def add(d, zt)
