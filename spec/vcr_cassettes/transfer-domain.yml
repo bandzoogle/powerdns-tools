@@ -5,25 +5,25 @@ http_interactions:
     uri: http://1271ed5ef305aadabc605b1609e24c52:@localhost:3000/registrations/new/transfer.json
     body:
       encoding: US-ASCII
-      string: ! '{"registration":{"Address1":"22 Test Lane","City":"Montague","Country":"USA","EmailAddress":"test@tester.com","FirstName":"First","LastName":"Last","OrganizationName":"Org","Phone":"222.222.2222","PostalCode":"01351","StateProvince":"MA","name":"new-domain123.net"}}'
+      string: '{"registration":{"Address1":"22 Test Lane","City":"Montague","Country":"USA","EmailAddress":"test@tester.com","FirstName":"First","LastName":"Last","OrganizationName":"Org","Phone":"222.222.2222","PostalCode":"01351","StateProvince":"MA","name":"new-domain123.net"}}'
     headers:
       Content-Type:
       - application/json
       Accept:
-      - ! '*/*'
+      - '*/*'
       User-Agent:
       - Ruby
   response:
     status:
       code: 200
-      message: ! 'OK '
+      message: 'OK '
     headers:
       Content-Type:
       - application/json; charset=utf-8
       X-Ua-Compatible:
       - IE=Edge
       Etag:
-      - ! '"776f34c2b68905ea805d29271d696630"'
+      - '"776f34c2b68905ea805d29271d696630"'
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
@@ -40,7 +40,49 @@ http_interactions:
       - Keep-Alive
     body:
       encoding: US-ASCII
-      string: ! '{"name":"new-domain123.net","sld":"new-domain123","tld":"net","expiration_date":"2015-03-06","nameservers":null,"registration_status":"Registered","locked":false}'
+      string: '{"name":"new-domain123.net","sld":"new-domain123","tld":"net","expiration_date":"2015-03-06","nameservers":null,"registration_status":"Registered","locked":false}'
     http_version: 
   recorded_at: Thu, 07 Mar 2013 02:26:16 GMT
-recorded_with: VCR 2.4.0
+- request:
+    method: post
+    uri: http://abcdefghijklmnopqrstuvwxyz:@powerdns-server.com/registrations/new/transfer.json
+    body:
+      encoding: UTF-8
+      string: '{"registration":{"Address1":"22 Test Lane","City":"Montague","Country":"USA","EmailAddress":"test@tester.com","FirstName":"First","LastName":"Last","OrganizationName":"Org","Phone":"222.222.2222","PostalCode":"01351","StateProvince":"MA","name":"new-domain123.net"}}'
+    headers:
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Date:
+      - Mon, 02 Dec 2013 19:57:57 GMT
+      Server:
+      - Apache/2.4.6 (Ubuntu)
+      Content-Length:
+      - '313'
+      Content-Type:
+      - text/html; charset=iso-8859-1
+    body:
+      encoding: UTF-8
+      string: |
+        <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+        <html><head>
+        <title>404 Not Found</title>
+        </head><body>
+        <h1>Not Found</h1>
+        <p>The requested URL /registrations/new/transfer.json was not found on this server.</p>
+        <hr>
+        <address>Apache/2.4.6 (Ubuntu) Server at powerdns-server.com Port 80</address>
+        </body></html>
+    http_version: 
+  recorded_at: Mon, 02 Dec 2013 19:57:57 GMT
+recorded_with: VCR 2.5.0
