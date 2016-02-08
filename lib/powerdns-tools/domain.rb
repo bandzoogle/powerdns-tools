@@ -55,6 +55,8 @@ module Powerdns
       params.each { |k, v|
         r.attributes[k] = v
       }
+
+puts r.inspect
       r.save
 
       r

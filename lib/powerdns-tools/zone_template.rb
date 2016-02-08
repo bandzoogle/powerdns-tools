@@ -1,5 +1,3 @@
-require 'zonefile'
-
 module Powerdns
   class ZoneTemplate < ActiveResource::Base
     ZoneTemplate.site = Powerdns.site_base
@@ -14,36 +12,6 @@ module Powerdns
 
       def query(zt)
         find(:first, :params => {:api_key => Powerdns.api_key, :name => zt})
-      end
-
-      def from_zonefile(data, name)
-        zf = Zonefile.new(data)
-
-        @records = []
-
-        @zt = ZoneTemplate.new(:name => name)
-
-        #
-        # The zonefile gem names a bunch of things differently from what our PDNS
-        # code wants.  Renaming for now
-        #
-        @soa = zf.soa.dup
-        @soa[:primary_ns] = @soa.delete(:primary)
-        @soa[:minimum] = @soa.delete(:minimumTTL)
-        @soa[:contact] = @soa.delete(:email)
-
-        @soa.delete(:origin)
-
-        @zt.add_record('SOA', '@', nil, @soa)
-
-        zf.records.each { |type, entries| 
-          entries.each { |e|
-            type = type.to_s.upcase
-            @zt.add_record(type, e[:name], e[:host], {:ttl => e[:ttl], :prio => e[:pri]})
-          }
-        }
-
-        @zt.save
       end
     end
 
